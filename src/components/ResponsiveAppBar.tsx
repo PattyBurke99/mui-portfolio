@@ -1,23 +1,21 @@
 import { useState } from 'react';
-import { useColorScheme } from '@mui/material';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
-import Toolbar from '@mui/material/Toolbar';
 import IconButton from '@mui/material/IconButton';
+import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Menu from '@mui/material/Menu';
 import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
-import LightMode from '@mui/icons-material/LightModeOutlined';
-import DarkMode from '@mui/icons-material/DarkModeOutlined';
+
+import ToggleDarkmode from './ToggleDarkmode';
 
 const pages = ['Home', 'Projects', 'Contact'];
-enum themeModes { Light = 'light', Dark = 'dark' }
 
 function ResponsiveAppBar() {
-    const { mode, setMode } = useColorScheme();
+
     const [anchorElNav, setAnchorElNav] = useState<null | HTMLElement>(null);
 
     const handleOpenNavMenu = (event: React.MouseEvent<HTMLElement>) => {
@@ -141,20 +139,7 @@ function ResponsiveAppBar() {
                             ))}
                         </Box>
                     </Box>
-                    {mode && mode === themeModes.Light &&
-                        <IconButton size="large" color='inherit' onClick={() => setMode(themeModes.Dark)}>
-                            <DarkMode sx={{
-                                alignSelf: 'center'
-                            }} />
-                        </IconButton>
-                    }
-                    {mode && mode === themeModes.Dark &&
-                        <IconButton size="large" color='inherit' onClick={() => setMode(themeModes.Light)}>
-                            <LightMode sx={{
-                                alignSelf: 'center'
-                            }} />
-                        </IconButton>
-                    }
+                    <ToggleDarkmode />
                 </Toolbar>
             </Container>
         </AppBar>
