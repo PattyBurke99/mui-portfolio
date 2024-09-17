@@ -17,7 +17,7 @@ import './main.css';
 
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: "/mui-portfolio/",
     element: <Layout />,
   },
 ]);
