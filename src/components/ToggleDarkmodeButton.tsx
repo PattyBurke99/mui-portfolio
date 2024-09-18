@@ -9,6 +9,8 @@ enum themeModes { Light = 'light', Dark = 'dark', System = 'system' }
 function ToggleDarkmodeButton() {
     const { mode, setMode } = useColorScheme();
 
+    console.log(`mode: ${mode}`);
+
     if (mode === themeModes.System) {
         const prefersDarkMode = useMediaQuery('(prefers-color-scheme: dark)');
         console.log(`prefersDarkMode: ${prefersDarkMode}`);
