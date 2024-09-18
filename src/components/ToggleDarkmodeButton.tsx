@@ -13,6 +13,14 @@ function ToggleDarkmodeButton() {
     if (mode === themeModes.System) {
         const prefersDarkMode = useMediaQuery('(prefers-color-scheme: dark)');
         setMode(prefersDarkMode ? 'dark' : 'light');
+        const statusBarMetaTag = document.querySelector('meta[name="apple-mobile-web-app-status-bar-style"]');
+        if (statusBarMetaTag) {
+            if (prefersDarkMode) {
+                statusBarMetaTag.setAttribute('content', 'black-translucent');
+            } else {
+                statusBarMetaTag.setAttribute('content', 'default');
+            }
+        } 
     }
 
     const changeColorScheme = (isDarkMode: boolean) => {
