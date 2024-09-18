@@ -4,26 +4,25 @@ import Box from '@mui/material/Box';
 import IconButton from '@mui/material/IconButton';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
-import Menu from '@mui/material/Menu';
 import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
-import MenuItem from '@mui/material/MenuItem';
 
-import ToggleDarkmode from './ToggleDarkmode';
+import MobileDrawerMenu from './MobileDrawerMenu';
+import ToggleDarkmodeButton from './ToggleDarkmodeButton';
 
 const pages = ['Home', 'Projects', 'Contact'];
 
 function ResponsiveAppBar() {
 
-    const [anchorElNav, setAnchorElNav] = useState<null | HTMLElement>(null);
+    const [mobileDrawerOpen, setMobileDrawerOpen] = useState<boolean>(false);
 
-    const handleOpenNavMenu = (event: React.MouseEvent<HTMLElement>) => {
-        setAnchorElNav(event.currentTarget);
+    const handleOpenNavMenu = () => {
+        setMobileDrawerOpen(true);
     };
 
     const handleCloseNavMenu = () => {
-        setAnchorElNav(null);
+        setMobileDrawerOpen(false)
     };
 
     return (
@@ -68,28 +67,7 @@ function ResponsiveAppBar() {
                         >
                             <MenuIcon />
                         </IconButton>
-                        <Menu
-                            id="menu-appbar"
-                            anchorEl={anchorElNav}
-                            anchorOrigin={{
-                                vertical: 'bottom',
-                                horizontal: 'left',
-                            }}
-                            keepMounted
-                            transformOrigin={{
-                                vertical: 'top',
-                                horizontal: 'left',
-                            }}
-                            open={Boolean(anchorElNav)}
-                            onClose={handleCloseNavMenu}
-                            sx={{ display: { xs: 'block', md: 'none' } }}
-                        >
-                            {pages.map((page) => (
-                                <MenuItem key={page} onClick={handleCloseNavMenu}>
-                                    <Typography sx={{ textAlign: 'center' }}>{page}</Typography>
-                                </MenuItem>
-                            ))}
-                        </Menu>
+                        <MobileDrawerMenu isOpen={mobileDrawerOpen} onClose={handleCloseNavMenu} />
                     </Box>
                     <Box sx={{
                         flexGrow: 1,
@@ -139,7 +117,7 @@ function ResponsiveAppBar() {
                             ))}
                         </Box>
                     </Box>
-                    <ToggleDarkmode />
+                    <ToggleDarkmodeButton />
                 </Toolbar>
             </Container>
         </AppBar>

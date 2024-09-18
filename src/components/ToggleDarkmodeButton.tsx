@@ -6,7 +6,7 @@ import DarkMode from '@mui/icons-material/DarkModeOutlined';
 
 enum themeModes { Light = 'light', Dark = 'dark', System = 'system' }
 
-function ToggleDarkmode() {
+function ToggleDarkmodeButton() {
     const { mode, setMode } = useColorScheme();
 
     if (mode === themeModes.System) {
@@ -34,4 +34,4 @@ function ToggleDarkmode() {
     )
 }
 
-export default ToggleDarkmode;
+export default ToggleDarkmodeButton;
