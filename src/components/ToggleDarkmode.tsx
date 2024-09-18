@@ -1,15 +1,18 @@
+import useMediaQuery from '@mui/material/useMediaQuery';
 import { useColorScheme } from '@mui/material';
 import IconButton from '@mui/material/IconButton';
 import LightMode from '@mui/icons-material/LightModeOutlined';
 import DarkMode from '@mui/icons-material/DarkModeOutlined';
 
-enum themeModes { Light = 'light', Dark = 'dark' }
+enum themeModes { Light = 'light', Dark = 'dark', System = 'system' }
 
 function ToggleDarkmode() {
-
     const { mode, setMode } = useColorScheme();
 
-    console.log(mode);
+    if (mode === themeModes.System) {
+        const prefersDarkMode = useMediaQuery('(prefers-color-scheme: dark)');
+        setMode(prefersDarkMode ? 'dark' : 'light');
+    }
 
     return (
         <>
