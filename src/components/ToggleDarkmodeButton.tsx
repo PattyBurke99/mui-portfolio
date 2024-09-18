@@ -11,8 +11,11 @@ function ToggleDarkmodeButton() {
 
     if (mode === themeModes.System) {
         const prefersDarkMode = useMediaQuery('(prefers-color-scheme: dark)');
+        console.log(`prefersDarkMode: ${prefersDarkMode}`);
         setMode(prefersDarkMode ? 'dark' : 'light');
+        console.log(`setMode: ${prefersDarkMode ? 'dark' : 'light'}`);
     }
+
 
     return (
         <>
