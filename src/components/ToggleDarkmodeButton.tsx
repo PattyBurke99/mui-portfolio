@@ -9,27 +9,38 @@ enum themeModes { Light = 'light', Dark = 'dark', System = 'system' }
 function ToggleDarkmodeButton() {
     const { mode, setMode } = useColorScheme();
 
-    console.log(`mode: ${mode}`);
-
+    //might be bad
     if (mode === themeModes.System) {
         const prefersDarkMode = useMediaQuery('(prefers-color-scheme: dark)');
-        console.log(`prefersDarkMode: ${prefersDarkMode}`);
         setMode(prefersDarkMode ? 'dark' : 'light');
-        console.log(`setMode: ${prefersDarkMode ? 'dark' : 'light'}`);
     }
 
+    const changeColorScheme = (isDarkMode: boolean) => {
+        const statusBarMetaTag = document.querySelector('meta[name="apple-mobile-web-app-status-bar-style"]');
+        if (isDarkMode) {
+            setMode(themeModes.Dark);
+            if (statusBarMetaTag) {
+                statusBarMetaTag.setAttribute('content', 'black-translucent');
+            }
+        } else {
+            setMode(themeModes.Light);
+            if (statusBarMetaTag) {
+                statusBarMetaTag.setAttribute('content', 'default');
+            }
+        }
+    } 
 
-    return (
+    return ( 
         <>
             {mode && mode === themeModes.Light &&
-                <IconButton size="large" color='inherit' onClick={() => setMode(themeModes.Dark)}>
+                <IconButton size="large" color='inherit' onClick={() => changeColorScheme(true)}>
                     <DarkMode sx={{
                         alignSelf: 'center'
                     }} />
                 </IconButton>
             }
             {mode && mode === themeModes.Dark &&
-                <IconButton size="large" color='inherit' onClick={() => setMode(themeModes.Light)}>
+                <IconButton size="large" color='inherit' onClick={() => changeColorScheme(false)}>
                     <LightMode sx={{
                         alignSelf: 'center'
                     }} />
