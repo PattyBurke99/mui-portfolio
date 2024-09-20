@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import IconButton from '@mui/material/IconButton';
@@ -7,8 +7,13 @@ import Typography from '@mui/material/Typography';
 import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
+import SwipeableDrawer from '@mui/material/SwipeableDrawer';
+import List from '@mui/material/List';
+import ListItem from '@mui/material/ListItem';
+import ListItemButton from '@mui/material/ListItemButton';
+import ListItemText from '@mui/material/ListItemText';
+import Divider from '@mui/material/Divider';
 
-import MobileDrawerMenu from './MobileDrawerMenu';
 import ToggleDarkmodeButton from './ToggleDarkmodeButton';
 
 const pages = ['Home', 'Projects', 'Contact'];
@@ -67,7 +72,30 @@ function ResponsiveAppBar() {
                         >
                             <MenuIcon />
                         </IconButton>
-                        <MobileDrawerMenu isOpen={mobileDrawerOpen} onClose={handleCloseNavMenu} />
+                        <SwipeableDrawer
+                            anchor="left"
+                            open={mobileDrawerOpen}
+                            onOpen={() => {}}
+                            onClose={handleCloseNavMenu}
+                        >
+                        <Box
+                            sx={{ width: 250 }}
+                            role="presentation"
+                        >
+                            <List>
+                            {pages.map((page: string) => (
+                                <React.Fragment  key={page}>
+                                    <ListItem disablePadding>
+                                        <ListItemButton>
+                                            <ListItemText primary={page} />
+                                        </ListItemButton>
+                                    </ListItem>
+                                    <Divider key={`${page}-divider-mobile`}/>
+                                </React.Fragment>
+                            ))}
+                            </List>   
+                        </Box>
+                        </SwipeableDrawer>
                     </Box>
                     <Box sx={{
                         flexGrow: 1,

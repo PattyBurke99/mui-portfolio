@@ -4,51 +4,28 @@ import IconButton from '@mui/material/IconButton';
 import LightMode from '@mui/icons-material/LightModeOutlined';
 import DarkMode from '@mui/icons-material/DarkModeOutlined';
 
-enum themeModes { Light = 'light', Dark = 'dark', System = 'system' }
+enum ThemeModes { Light = 'light', Dark = 'dark', System = 'system' }
 
 function ToggleDarkmodeButton() {
     const { mode, setMode } = useColorScheme();
 
     //might be bad
-    if (mode === themeModes.System) {
+    if (mode === ThemeModes.System) {
         const prefersDarkMode = useMediaQuery('(prefers-color-scheme: dark)');
         setMode(prefersDarkMode ? 'dark' : 'light');
-        const statusBarMetaTag = document.querySelector('meta[name="apple-mobile-web-app-status-bar-style"]');
-        if (statusBarMetaTag) {
-            if (prefersDarkMode) {
-                statusBarMetaTag.setAttribute('content', 'black-translucent');
-            } else {
-                statusBarMetaTag.setAttribute('content', 'default');
-            }
-        } 
     }
-
-    const changeColorScheme = (isDarkMode: boolean) => {
-        const statusBarMetaTag = document.querySelector('meta[name="apple-mobile-web-app-status-bar-style"]');
-        if (isDarkMode) {
-            setMode(themeModes.Dark);
-            if (statusBarMetaTag) {
-                statusBarMetaTag.setAttribute('content', 'black-translucent');
-            }
-        } else {
-            setMode(themeModes.Light);
-            if (statusBarMetaTag) {
-                statusBarMetaTag.setAttribute('content', 'default');
-            }
-        }
-    } 
 
     return ( 
         <>
-            {mode && mode === themeModes.Light &&
-                <IconButton size="large" color='inherit' onClick={() => changeColorScheme(true)}>
+            {mode && mode === ThemeModes.Light &&
+                <IconButton size="large" color='inherit' onClick={() => setMode(ThemeModes.Dark)}>
                     <DarkMode sx={{
                         alignSelf: 'center'
                     }} />
                 </IconButton>
             }
-            {mode && mode === themeModes.Dark &&
-                <IconButton size="large" color='inherit' onClick={() => changeColorScheme(false)}>
+            {mode && mode === ThemeModes.Dark &&
+                <IconButton size="large" color='inherit' onClick={() => setMode(ThemeModes.Light)}>
                     <LightMode sx={{
                         alignSelf: 'center'
                     }} />
