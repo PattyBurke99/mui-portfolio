@@ -16,6 +16,12 @@ import {
 } from '@mui/material'
 import MenuIcon from '@mui/icons-material/Menu';
 
+import { 
+    mobileDrawerWidth,
+    appbarHeightXs,
+    appbarHeightMd
+} from '../../constants/Layout';
+
 const pages = ['About', 'Projects', 'Contact'];
 
 function ResponsiveAppBar() {
@@ -31,7 +37,10 @@ function ResponsiveAppBar() {
     };
 
     return (
-        <AppBar position="static" color="primary">
+        <AppBar position="fixed" color="primary" sx={{
+             zIndex: (theme) => theme.zIndex.drawer + 1,
+            height: {xs: appbarHeightXs, md: appbarHeightMd}
+        }}>
             <Container maxWidth="xl">
                 <Toolbar disableGutters>
                     <Box sx={{
@@ -79,7 +88,7 @@ function ResponsiveAppBar() {
                             onClose={handleCloseNavMenu}
                         >
                         <Box
-                            sx={{ width: 250 }}
+                            sx={{ width: mobileDrawerWidth, paddingTop: appbarHeightXs }}
                             role="presentation"
                         >
                             <List>
@@ -145,7 +154,11 @@ function ResponsiveAppBar() {
                             ))}
                         </Box>
                     </Box>
-                    {/* <ToggleDarkmodeButton /> */}
+                    <Box sx={{
+                        display: {md: "none"},
+                        flexBasis: 48,
+                        flexGrow: 0
+                    }}/>
                 </Toolbar>
             </Container>
         </AppBar>

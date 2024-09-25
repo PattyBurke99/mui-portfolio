@@ -1,6 +1,5 @@
 import {
     Box,
-    Typography,
 } from '@mui/material'
 
 import Introduction from '../components/Home/Introduction';
@@ -13,8 +12,7 @@ function Home() {
                 margin: "auto",
                 padding: "1rem",
             }}>
-                <Introduction />
-                <Typography variant="h5">About</Typography>
+                {/* <Introduction /> */}
             </Box>
         </>
     )
