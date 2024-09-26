@@ -2,7 +2,7 @@ import {
     Box,
 } from '@mui/material'
 
-import Introduction from '../components/Home/Introduction';
+// import Introduction from '../components/Home/Introduction';
 
 function Home() {
     return (
