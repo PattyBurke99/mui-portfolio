@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import {
     Box,
     Card,
@@ -18,24 +17,20 @@ const DrawerHeader = styled('div')(({ theme }) => ({
     justifyContent: 'flex-end',
 }));
 
-function AboutDrawer() {
+interface IAboutDrawerProps {
+    handleDrawerOpen: () => void;
+    handleDrawerClose: () => void;
+    isOpen: boolean;
+}
 
-    const [open, setOpen] = useState(true);
-
-    const handleDrawerOpen = () => {
-        setOpen(true);
-      };
-    
-      const handleDrawerClose = () => {
-        setOpen(false);
-      };
+function AboutDrawer({ isOpen, handleDrawerOpen, handleDrawerClose }: IAboutDrawerProps) {
 
     return (
     <>
         <Drawer 
             variant="persistent"
             anchor="left"
-            open={open}
+            open={isOpen}
             sx={{
                 display: {xs: "none", md: "block"}
             }}
@@ -57,9 +52,11 @@ function AboutDrawer() {
                 </Card>
             </Box>
         </Drawer>
-        {!open &&
+        {!isOpen &&
             <Box sx={{
-                marginTop: appbarHeightMd
+                position: "absolute",
+                top: appbarHeightMd,
+                display: {xs: "none", md: "block"}
             }}>
                 <IconButton onClick={() => handleDrawerOpen()}>
                     <ChevronRight />
