@@ -32,7 +32,8 @@ function AboutDrawer({ isOpen, handleDrawerOpen, handleDrawerClose }: IAboutDraw
             anchor="left"
             open={isOpen}
             sx={{
-                display: {xs: "none", md: "block"}
+                display: {xs: "none", md: "block"},
+                boxSizing: 'border-box',
             }}
         >
             <Box sx={{

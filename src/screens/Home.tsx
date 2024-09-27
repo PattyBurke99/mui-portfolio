@@ -2,7 +2,7 @@ import {
     Box,
 } from '@mui/material'
 
-// import Introduction from '../components/Home/Introduction';
+import Introduction from '../components/Home/Introduction';
 
 function Home() {
     return (
@@ -12,7 +12,7 @@ function Home() {
                 margin: "auto",
                 padding: "1rem",
             }}>
-                {/* <Introduction /> */}
+                <Introduction />
             </Box>
         </>
     )
