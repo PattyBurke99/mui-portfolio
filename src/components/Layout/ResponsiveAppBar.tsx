@@ -22,7 +22,7 @@ import {
     appbarHeightMd
 } from '../../constants/Layout';
 
-const pages = ['About', 'Projects', 'Contact'];
+const pages = ['Home', 'Projects', 'Contact'];
 
 function ResponsiveAppBar() {
 
@@ -164,4 +164,5 @@ function ResponsiveAppBar() {
         </AppBar>
     );
 }
+
 export default ResponsiveAppBar;

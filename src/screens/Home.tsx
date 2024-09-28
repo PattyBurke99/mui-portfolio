@@ -8,9 +8,7 @@ function Home() {
     return (
         <>
             <Box sx={{
-                maxWidth: "1280px",
-                margin: "auto",
-                padding: "1rem",
+                padding: "2rem",
             }}>
                 <Introduction />
             </Box>

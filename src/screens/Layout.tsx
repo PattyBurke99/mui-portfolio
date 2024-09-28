@@ -1,17 +1,14 @@
 import { useState } from "react";
 import { Outlet } from "react-router-dom";
-import { Box } from "@mui/material";
+import { Box, useMediaQuery, useTheme } from "@mui/material";
 import { styled } from '@mui/material/styles';
 
 import ResponsiveAppBar from "../components/Layout/ResponsiveAppBar";
 import AboutDrawer from "../components/Layout/AboutDrawer";
 import { aboutDrawerWidth, appbarHeightMd, appbarHeightXs } from "../constants/Layout";
 
-const Main = styled('div', { shouldForwardProp: (prop) => prop !== 'open' })<{
-    open?: boolean;
-  }>(({ theme }) => ({
-    flexGrow: 1,
-    padding: theme.spacing(3),
+const Main = styled('div')<{open?: boolean}>(({ theme }) => 
+({
     transition: theme.transitions.create('margin', {
       easing: theme.transitions.easing.sharp,
       duration: theme.transitions.duration.leavingScreen,
@@ -25,14 +22,14 @@ const Main = styled('div', { shouldForwardProp: (prop) => prop !== 'open' })<{
             easing: theme.transitions.easing.easeOut,
             duration: theme.transitions.duration.enteringScreen,
           }),
-          marginLeft: `${aboutDrawerWidth}`,
+          marginLeft: aboutDrawerWidth,
         },
       },
     ],
 }));
 
 function Layout() {
-
+    const theme = useTheme();
     const [aboutDrawerOpen, setAboutDrawerOpen] = useState<boolean>(true);
 
     const handleDrawerOpen = () => {
@@ -43,18 +40,21 @@ function Layout() {
         setAboutDrawerOpen(false);
     }
 
+    const isMdBreakpoint: boolean = useMediaQuery(theme.breakpoints.up('md'));
+
     return (
         <>
             <ResponsiveAppBar />
+            {isMdBreakpoint && 
             <AboutDrawer 
                 isOpen={aboutDrawerOpen}
                 handleDrawerOpen={handleDrawerOpen}
                 handleDrawerClose={handleDrawerClose}
-            />
+            />}
             <Box sx={{
                 marginTop: {xs: appbarHeightXs, md: appbarHeightMd}
             }}>
-                <Main open={aboutDrawerOpen}>
+                <Main open={isMdBreakpoint && aboutDrawerOpen}>
                     <Outlet />
                 </Main>
             </Box>

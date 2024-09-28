@@ -6,14 +6,14 @@ import {
 } from '@mui/material';
 import { styled } from '@mui/material/styles';
 import { ChevronLeft, ChevronRight } from '@mui/icons-material';
+
+import About from '../Home/About';
 import { aboutDrawerWidth, appbarHeightMd } from '../../constants/Layout';
 
 const DrawerHeader = styled('div')(({ theme }) => ({
     display: 'flex',
     alignItems: 'center',
     padding: theme.spacing(0, 1),
-    // necessary for content to be below app bar
-    ...theme.mixins.toolbar,
     justifyContent: 'flex-end',
 }));
 
@@ -40,16 +40,19 @@ function AboutDrawer({ isOpen, handleDrawerOpen, handleDrawerClose }: IAboutDraw
                 width: aboutDrawerWidth,
                 height: "100%",
                 marginTop: appbarHeightMd,
+                overflow: 'hidden'
             }}>
                 <Card elevation={6} sx={{
                     height: "99%",
-                    width: "99%"
+                    width: "99%",
+                    overflowY: 'scroll'
                 }}>
                     <DrawerHeader>
                         <IconButton onClick={() => handleDrawerClose()}>
                             <ChevronLeft />
                         </IconButton>
                     </DrawerHeader>
+                    <About />
                 </Card>
             </Box>
         </Drawer>
