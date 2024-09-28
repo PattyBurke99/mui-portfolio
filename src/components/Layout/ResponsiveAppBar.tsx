@@ -1,4 +1,5 @@
 import { useState, Fragment } from 'react';
+import { Link } from 'react-router-dom';
 import {
     AppBar,
     Box,
@@ -145,8 +146,10 @@ function ResponsiveAppBar() {
                         <Box sx={{ width: '100%', display: 'flex', justifyContent: 'flex-end' }} >
                             {pages.map((page) => (
                                 <Button
+                                    component={Link}
+                                    // Big time change this next line -- define routes in some constants file
+                                    to={page === 'Home' ? '/mui-portfolio/' : `/mui-portfolio/${page}`}
                                     key={page}
-                                    onClick={handleCloseNavMenu}
                                     sx={{ my: 2, color: 'white', display: 'block' }}
                                 >
                                     {page}
