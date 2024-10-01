@@ -3,7 +3,7 @@ import { ContentCard } from './ContentCard';
 
 interface IContentCardData {
     title: string;
-    icon: React.ReactElement;
+    icon?: React.ReactElement;
     content?: React.ReactNode;
 }
 

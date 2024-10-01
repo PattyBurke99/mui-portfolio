@@ -1,12 +1,23 @@
 import {
-    Typography
+    Box
 } from '@mui/material'
 
 import CardGroup from '../components/CardGroup';
 
+const portfolioCard = {
+    title: 'Portfolio',
+}
+
+
 function Projects() {
     return (
-        <Typography>Projects</Typography>
+        <Box sx={{
+            display: 'flex',
+            flexDirection: 'column',
+            minHeight: '100%',
+        }}>
+            <CardGroup cards={[portfolioCard]} />
+        </Box>
     )
 }
 

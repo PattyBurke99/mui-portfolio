@@ -10,7 +10,7 @@ import {
 } from '@mui/material'
 
 export interface IContentCardProps {
-    icon: React.ReactElement;
+    icon?: React.ReactElement;
     title: string;
     animationTime: number;
     zLayer: number;
@@ -26,7 +26,7 @@ export function ContentCard({ icon, title, animationTime, zLayer, children }: IC
         }}>
             <CardHeader title={
                 <Box sx={{position: 'relative'}}>
-                    {cloneElement(icon, { sx: {position: 'relative', top: 4}})}
+                    {icon && cloneElement(icon, { sx: {position: 'relative', top: 4}})}
                     <Typography display="inline" variant="h5"> {title}</Typography>
                 </Box>
             }/>

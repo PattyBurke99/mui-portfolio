@@ -28,17 +28,15 @@ function Home() {
             flexDirection: 'column',
             minHeight: '100%',
         }}>
-            <Box>
-                <Slide in direction="right" timeout={600}>
-                    <Box>
-                        <Typography display="inline" variant="h5" color="secondary">Hey,</Typography>
-                        <Typography display="inline" variant="h5"> I'm Patrick!</Typography>
-                    </Box>
-                </Slide>
-                <Slide in direction="right" timeout={600}>
-                    <Typography variant="h4">Full Stack Developer</Typography>
-                </Slide>
-            </Box>
+            {/* <Slide in direction="right" timeout={600}>
+                <Box>
+                    <Typography display="inline" variant="h5" color="secondary">Hey,</Typography>
+                    <Typography display="inline" variant="h5"> I'm Patrick!</Typography>
+                </Box>
+            </Slide>
+            <Slide in direction="right" timeout={600}>
+                <Typography variant="h4">Full Stack Developer</Typography>
+            </Slide> */}
             <CardGroup cards={[overviewCard, experienceCard, skillsCard]}/>
         </Box>
     )
