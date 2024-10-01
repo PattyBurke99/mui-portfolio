@@ -7,6 +7,7 @@ import {
     Slide,
     Typography
 } from '@mui/material'
+import { Assignment, Engineering, List } from '@mui/icons-material';    
 
 function Home() {
     return (
@@ -17,14 +18,14 @@ function Home() {
         }}>
 
             <Box>
-                <Slide in direction="right" timeout={300}>
+                <Slide in direction="right" timeout={600}>
                     <Box>
                         <Typography display="inline" variant="h5" color="secondary">Hey,</Typography>
                         <Typography display="inline" variant="h5"> I'm Patrick!</Typography>
                     </Box>
                 </Slide>
                 <Slide in direction="right" timeout={600}>
-                    <Typography variant="h3">Full Stack Developer</Typography>
+                    <Typography variant="h4">Full Stack Developer</Typography>
                 </Slide>
             </Box>
 
@@ -35,58 +36,59 @@ function Home() {
                 flexDirection: {xs: 'column', md: 'row'},
                 gap: '1rem'
             }}>
-                <Slide in direction="right" timeout={900}>
-                    <Card elevation={3} sx={{
-                        minWidth: {md: '320px'},
-                        zIndex: 4,
-                    }}>
-                        <CardHeader title='About Me' />
-                        <Divider />
-                        <CardContent>
-                            TEST TEST TEST
-                        </CardContent>
-                    </Card>
-                </Slide>
-
-                <Slide in direction="right" timeout={1200}>
+                <Slide in direction="right" timeout={300}>
                     <Card elevation={3} sx={{
                         minWidth: {md: '320px'},
                         zIndex: 3,
                     }}>
-                        <CardHeader title='Skills' />
+                        <CardHeader title={
+                            <Box sx={{position: 'relative'}}>
+                                <List sx={{position: 'relative', top: 4}}/>
+                                <Typography display="inline" variant="h5"> Overview</Typography>
+                            </Box>
+                        }/>
                         <Divider />
                         <CardContent>
-                            TEST TEST TEST
+
                         </CardContent>
                     </Card>
                 </Slide>
 
-                <Slide in direction="right" timeout={1200}>
+                <Slide in direction="right" timeout={600}>
                     <Card elevation={3} sx={{
                         minWidth: {md: '320px'},
                         zIndex: 2,
                     }}>
-                        <CardHeader title='Test1' />
+                        <CardHeader title={
+                            <Box sx={{position: 'relative'}}>
+                                <Assignment sx={{position: 'relative', top: 4}}/>
+                                <Typography display="inline" variant="h5"> Experience</Typography>
+                            </Box>
+                        }/>
                         <Divider />
                         <CardContent>
-                            TEST TEST TEST
+
                         </CardContent>
                     </Card>
                 </Slide>
 
-                                <Slide in direction="right" timeout={1200}>
+                <Slide in direction="right" timeout={900}>
                     <Card elevation={3} sx={{
                         minWidth: {md: '320px'},
-                        zIndex: 1,
+                        zIndex: 3,
                     }}>
-                        <CardHeader title='Test1' />
+                        <CardHeader title={
+                            <Box sx={{position: 'relative'}}>
+                                <Engineering sx={{position: 'relative', top: 4}}/>
+                                <Typography display="inline" variant="h5"> Skills</Typography>
+                            </Box>
+                        }/>
                         <Divider />
                         <CardContent>
-                            TEST TEST TEST
+
                         </CardContent>
                     </Card>
                 </Slide>
-
             </Box>
         </Box>
     )

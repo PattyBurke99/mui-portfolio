@@ -53,11 +53,16 @@ function ResponsiveAppBar() {
         }}>
             <Container maxWidth="xl">
                 <Toolbar disableGutters>
+                    <Typography fontSize={44} fontWeight={8} sx={{ 
+                        marginRight: '0.4rem',
+                        display: {xs: 'none', md: 'block'}
+                    }}>
+                        &#123;
+                    </Typography>
                     <Box sx={{
                         display: { xs: 'none', md: 'flex' },
                         flexDirection: 'column',
                         color: 'inherit',
-                        mr: 2
                     }}>
                         <Typography
                             variant="h6"
@@ -67,7 +72,7 @@ function ResponsiveAppBar() {
                                 letterSpacing: '.2rem',
                             }}
                         >
-                            PATRICK BURKE:
+                            PATRICK BURKE
                         </Typography>
                         <Typography
                             variant='subtitle2'
@@ -80,6 +85,12 @@ function ResponsiveAppBar() {
                             FULL STACK DEVELOPER
                         </Typography>
                     </Box>
+                    <Typography fontSize={44} fontWeight={8} sx={{ 
+                        display: {xs: 'none', md: 'block'},
+                        marginLeft: '0.4rem'
+                    }}>
+                        &#125;
+                    </Typography>
                     <Box sx={{ flexGrow: 0, display: { xs: 'flex', md: 'none' } }}>
                         <IconButton
                             size="large"
@@ -136,7 +147,7 @@ function ResponsiveAppBar() {
                                     letterSpacing: '.2rem',
                                 }}
                             >
-                                PATRICK BURKE:
+                                PATRICK BURKE
                             </Typography>
                             <Typography
                                 variant='subtitle2'

@@ -1,6 +1,6 @@
 @media only screen and (max-width: 899px) {
     body {
-        height: calc(100vh - 56px);
+        min-height: calc(100vh - 56px);
     }
 }
 
@@ -13,4 +13,9 @@
 
 #root {
     height: 100%;
+}
+
+.MuiCardHeader-root {
+    background-color: #676B81;
+    color: #fff
 }
