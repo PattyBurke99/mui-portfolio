@@ -21,7 +21,7 @@ import {
     mobileDrawerWidth,
     appbarHeightXs,
     appbarHeightMd
-} from '../../constants/Layout';
+} from '../../constants';
 
 interface IPage {
     name: string,
@@ -167,7 +167,6 @@ function ResponsiveAppBar() {
                             {pages.map((page: IPage) => (
                                 <Button
                                     component={Link}
-                                    // Big time change this next line -- define routes in some constants file
                                     to={page.path}
                                     key={page.name}
                                     sx={{ my: 2, color: 'white', display: 'block' }}

@@ -8,7 +8,7 @@ import { styled } from '@mui/material/styles';
 import { ChevronLeft, ChevronRight } from '@mui/icons-material';
 
 import AboutContent from './AboutContent';
-import { aboutDrawerWidth, appbarHeightMd } from '../../constants/Layout';
+import { aboutDrawerWidth, appbarHeightMd } from '../../constants';
 
 const DrawerHeader = styled('div')(({ theme }) => ({
     display: 'flex',

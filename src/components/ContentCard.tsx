@@ -23,6 +23,7 @@ export function ContentCard({ icon, title, animationTime, zLayer, children }: IC
         <Card elevation={3} sx={{
             minWidth: {md: '320px'},
             zIndex: zLayer,
+
         }}>
             <CardHeader title={
                 <Box sx={{position: 'relative'}}>

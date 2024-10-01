@@ -5,7 +5,7 @@ import { styled } from '@mui/material/styles';
 
 import ResponsiveAppBar from "../components/Layout/ResponsiveAppBar";
 import AboutDrawer from "../components/Layout/AboutDrawer";
-import { aboutDrawerWidth, appbarHeightMd, appbarHeightXs } from "../constants/Layout";
+import { aboutDrawerWidth, appbarHeightMd, appbarHeightXs } from "../constants";
 
 const Main = styled('div')<{open?: boolean}>(({ theme }) => 
 ({
