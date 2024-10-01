@@ -1,7 +1,7 @@
 import {
     Box,
-    Slide,
-    Typography
+    // Slide,
+    // Typography
 } from '@mui/material'
 import { Assignment, Engineering, List } from '@mui/icons-material';    
 import CardGroup from '../components/CardGroup';
