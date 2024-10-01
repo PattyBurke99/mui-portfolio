@@ -1,14 +1,14 @@
 import { Box } from '@mui/material';
 import { ContentCard } from './ContentCard';
 
-interface IContentCard {
+interface IContentCardData {
     title: string;
     icon: React.ReactElement;
     content?: React.ReactNode;
 }
 
 interface ICardGroup {
-    cards: IContentCard[];
+    cards: IContentCardData[];
 }
 
 const baseAnimationTime = 300;
