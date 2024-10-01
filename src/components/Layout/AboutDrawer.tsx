@@ -7,7 +7,7 @@ import {
 import { styled } from '@mui/material/styles';
 import { ChevronLeft, ChevronRight } from '@mui/icons-material';
 
-import About from '../Home/About';
+import AboutContent from './AboutContent';
 import { aboutDrawerWidth, appbarHeightMd } from '../../constants/Layout';
 
 const DrawerHeader = styled('div')(({ theme }) => ({
@@ -52,7 +52,7 @@ function AboutDrawer({ isOpen, handleDrawerOpen, handleDrawerClose }: IAboutDraw
                             <ChevronLeft />
                         </IconButton>
                     </DrawerHeader>
-                    <About />
+                    <AboutContent />
                 </Card>
             </Box>
         </Drawer>

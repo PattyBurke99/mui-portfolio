@@ -13,7 +13,7 @@ const Main = styled('div')<{open?: boolean}>(({ theme }) =>
       easing: theme.transitions.easing.sharp,
       duration: theme.transitions.duration.leavingScreen,
     }),
-    marginLeft: '8rem',
+    marginLeft: 0,
     variants: [
       {
         props: ({ open }) => open,
