@@ -26,7 +26,7 @@ function AboutContent() {
                 padding: '1rem',
                 flexGrow: 1,
             }}>
-                <Typography variant='h5' sx={{
+                <Typography variant='h6' sx={{
                     paddingY: '0.5rem',
                     display: 'flex',
                     justifyContent: 'center',
