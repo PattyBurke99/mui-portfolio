@@ -18,7 +18,6 @@ function CardGroup({ cards }: ICardGroup) {
     return (
         <Box sx={{
             flexGrow: 1,
-            marginTop: '1rem',
             display: 'flex',
             flexDirection: {xs: 'column', md: 'row'},
             gap: '1rem'
