@@ -29,7 +29,8 @@ function AboutContent() {
                 <Typography variant='h5' sx={{
                     paddingY: '0.5rem',
                     display: 'flex',
-                    justifyContent: 'center'
+                    justifyContent: 'center',
+                    textDecoration: 'underline'
                 }}>
                     Welcome to my Portfolio!
                 </Typography>
