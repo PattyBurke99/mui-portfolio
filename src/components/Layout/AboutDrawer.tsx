@@ -45,7 +45,7 @@ function AboutDrawer({ isOpen, handleDrawerOpen, handleDrawerClose }: IAboutDraw
                 <Card elevation={6} sx={{
                     height: "99%",
                     width: "99%",
-                    overflowY: 'scroll'
+                    overflowY: 'auto'
                 }}>
                     <DrawerHeader>
                         <IconButton onClick={() => handleDrawerClose()}>

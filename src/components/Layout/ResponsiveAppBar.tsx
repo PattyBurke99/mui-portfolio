@@ -23,7 +23,16 @@ import {
     appbarHeightMd
 } from '../../constants/Layout';
 
-const pages = ['Home', 'Projects', 'Contact'];
+interface IPage {
+    name: string,
+    path: string
+}
+
+const pages: IPage[] = [
+    {name: 'Home', path: '/mui-portfolio/'},
+    {name: 'Projects', path: '/mui-portfolio/projects'},
+    {name: 'Contact', path: '/mui-portfolio/contact'}
+];
 
 function ResponsiveAppBar() {
 
@@ -93,14 +102,14 @@ function ResponsiveAppBar() {
                             role="presentation"
                         >
                             <List>
-                            {pages.map((page: string) => (
-                                <Fragment  key={page}>
+                            {pages.map((page: IPage) => (
+                                <Fragment  key={page.name}>
                                     <ListItem disablePadding>
                                         <ListItemButton>
-                                            <ListItemText primary={page} />
+                                            <ListItemText primary={page.name} />
                                         </ListItemButton>
                                     </ListItem>
-                                    <Divider key={`${page}-divider-mobile`}/>
+                                    <Divider key={`${page.name}-divider-mobile`}/>
                                 </Fragment>
                             ))}
                             </List>   
@@ -144,15 +153,15 @@ function ResponsiveAppBar() {
                     </Box>
                     <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
                         <Box sx={{ width: '100%', display: 'flex', justifyContent: 'flex-end' }} >
-                            {pages.map((page) => (
+                            {pages.map((page: IPage) => (
                                 <Button
                                     component={Link}
                                     // Big time change this next line -- define routes in some constants file
-                                    to={page === 'Home' ? '/mui-portfolio/' : `/mui-portfolio/${page}`}
-                                    key={page}
+                                    to={page.path}
+                                    key={page.name}
                                     sx={{ my: 2, color: 'white', display: 'block' }}
                                 >
-                                    {page}
+                                    {page.name}
                                 </Button>
                             ))}
                         </Box>

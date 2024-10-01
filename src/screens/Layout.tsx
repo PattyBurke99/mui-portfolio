@@ -52,9 +52,14 @@ function Layout() {
                 handleDrawerClose={handleDrawerClose}
             />}
             <Box sx={{
-                marginTop: {xs: appbarHeightXs, md: appbarHeightMd}
+                marginTop: {xs: appbarHeightXs, md: appbarHeightMd},
+                height: '100%'
             }}>
-                <Main open={isMdBreakpoint && aboutDrawerOpen}>
+                <Main open={isMdBreakpoint && aboutDrawerOpen} sx={{
+                  height: '100%',
+                  overflow: 'auto',
+                  padding: {xs: '1rem', md: '2rem'}
+                }}>
                     <Outlet />
                 </Main>
             </Box>
