@@ -58,7 +58,7 @@ function Layout() {
                 <Main open={isMdBreakpoint && aboutDrawerOpen} sx={{
                   height: '100%',
                   overflow: 'auto',
-                  paddingX: {xs: '1rem', md: '2rem'},
+                  padding: {xs: '1rem', md: '2rem'},
                 }}>
                     <Box sx={{
                       height: '100%',
