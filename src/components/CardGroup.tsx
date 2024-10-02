@@ -30,6 +30,7 @@ function CardGroup({ cards }: ICardGroup) {
     return (
         <Box sx={{
             flexGrow: 1,
+            height: '100%',
             display: 'flex',
             flexDirection: {xs: 'column', md: 'row'},
             minWidth: { md: mdMinWidth, lg: lgMinWidth },
