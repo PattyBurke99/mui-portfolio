@@ -24,6 +24,7 @@ function CardGroup({ cards }: ICardGroup) {
         }}>
             {cards.map((card, index) => (
                 <ContentCard 
+                    key={`card-${card.title}-${index}`}
                     title={card.title}
                     icon={card.icon} 
                     animationTime={(index+1) * baseAnimationTime} 
