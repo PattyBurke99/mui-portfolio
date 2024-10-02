@@ -89,7 +89,6 @@ const skillsCard = {
                     primary="Technical Skills:"
                     primaryTypographyProps={{variant: 'h6'}}
                 />
-                <Divider />
                 <Box  sx={{display: 'flex'}}>
                     <Box>
                         <ListItem>JavaScript</ListItem>
@@ -105,13 +104,11 @@ const skillsCard = {
                         <ListItem>DevOps</ListItem>
                     </Box>
                 </Box>
-                <Divider />
                 <ListItemText 
-                    sx={{paddingX: '0.3rem', marginTop: 0}}
+                    sx={{paddingX: '0.3rem', marginTop: '0.4rem'}}
                     primary="Soft Skills:"
                     primaryTypographyProps={{variant: 'h6'}}
                 />
-                <Divider />
                 <ListItem>Problem Solving</ListItem>
                 <ListItem>Self-Learning</ListItem>
                 <ListItem>Communiation</ListItem>

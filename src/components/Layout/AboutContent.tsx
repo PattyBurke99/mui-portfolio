@@ -51,7 +51,9 @@ function AboutContent() {
             }}>
                 <Button size='small' sx={{
                     backgroundColor: 'secondary.light',
-                    color: '#fff'
+                    color: '#fff',
+                    marginBottom: {xs: '1rem', md: 0, lg: '2rem'},
+                    marginTop: {xs: '2rem', md: 0}
                 }}>
                     My Resume
                 </Button>
