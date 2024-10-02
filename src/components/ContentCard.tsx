@@ -21,21 +21,21 @@ export interface IContentCardProps {
 export function ContentCard({ icon, title, animationTime, zLayer, children }: IContentCardProps) {
     return (
         <Slide in direction="right" timeout={animationTime}>
-        <Card elevation={3} sx={{
-            width: { md: contentCardWidthMd, lg: contentCardWidthLg},
-            zIndex: zLayer,
-        }}>
-            <CardHeader title={
-                <Box sx={{position: 'relative'}}>
-                    {icon && cloneElement(icon, { sx: {position: 'relative', top: 4}})}
-                    <Typography display="inline" variant="h5"> {title}</Typography>
-                </Box>
-            }/>
-            <Divider />
-            <CardContent>
-                {children}
-            </CardContent>
-        </Card>
-    </Slide>
+            <Card elevation={3} sx={{
+                width: { md: contentCardWidthMd, lg: contentCardWidthLg},
+                zIndex: zLayer,
+            }}>
+                <CardHeader title={
+                    <Box sx={{position: 'relative'}}>
+                        {icon && cloneElement(icon, { sx: {position: 'relative', top: 4}})}
+                        <Typography display="inline" variant="h5"> {title}</Typography>
+                    </Box>
+                }/>
+                <Divider />
+                <CardContent>
+                    {children}
+                </CardContent>
+            </Card>
+        </Slide>
     )
 }
