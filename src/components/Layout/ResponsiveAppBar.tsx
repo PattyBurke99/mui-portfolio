@@ -116,7 +116,11 @@ function ResponsiveAppBar() {
                             {pages.map((page: IPage) => (
                                 <Fragment  key={page.name}>
                                     <ListItem disablePadding>
-                                        <ListItemButton>
+                                        <ListItemButton 
+                                            component={Link}
+                                            to={page.path}
+                                            onClick={handleCloseNavMenu}
+                                        >
                                             <ListItemText primary={page.name} />
                                         </ListItemButton>
                                     </ListItem>
