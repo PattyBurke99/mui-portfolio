@@ -17,10 +17,10 @@ function AboutContent() {
             height: 'calc(100% - 3rem)'
         }}>
             <Avatar sx={{
-                width: '13rem',
-                height: '13rem',
+                width: { xs: '128px', lg: '256px' },
+                height: { xs: '128px', lg: '256px' },
                 margin: 'auto',
-                marginTop: '2rem'
+                marginTop: { lg:'1rem' }
             }}/>
             <Box sx={{
                 padding: '1rem',
@@ -33,6 +33,12 @@ function AboutContent() {
                     textDecoration: 'underline'
                 }}>
                     Welcome to my Portfolio!
+                </Typography>
+                <Typography>
+                    My name is Patrick Burke and I am a passionate Full Stack Developer with an 
+                    engineering background. I have created this Portfolio site as an example of the
+                    type of responsive, reactive, and accessible web applications that I excel at
+                    creating.
                 </Typography>
             </Box>
             <Box sx={{
