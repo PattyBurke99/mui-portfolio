@@ -60,7 +60,16 @@ function Layout() {
                   overflow: 'auto',
                   padding: {xs: '1rem', md: '2rem'}
                 }}>
-                    <Outlet />
+                    <Box sx={{
+                      height: '100%',
+                      marginLeft: {md: !aboutDrawerOpen ? '2rem' : 0},
+                      transition: theme.transitions.create('margin', {
+                        easing: theme.transitions.easing.easeOut,
+                        duration: theme.transitions.duration.enteringScreen,
+                      })
+                    }}>
+                      <Outlet />
+                    </Box>
                 </Main>
             </Box>
         </>
