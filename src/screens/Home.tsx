@@ -1,6 +1,8 @@
 import {
     Box,
     Card,
+    Divider,
+    Typography,
     useMediaQuery,
     useTheme
 } from '@mui/material'
@@ -11,6 +13,16 @@ import AboutContent from '../components/Layout/AboutContent';
 const overviewCard = {
     title: 'Overview',
     icon: <List />,
+    content:
+    (
+        <>
+            <Typography>
+                Full Stack Developer who has completed a Diploma in Engineering (2020) as well 
+                as a Graduate Certificate in Full Stack Development (2024). 
+            </Typography>
+            <Divider sx={{paddingY: '0.2rem'}}/>
+        </>
+    )
 }
 
 const experienceCard = {
