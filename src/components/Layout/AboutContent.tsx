@@ -1,6 +1,7 @@
 import {
     Avatar,
     Box,
+    Button,
     IconButton,
     Typography
 } from '@mui/material';
@@ -24,6 +25,7 @@ function AboutContent() {
             }}/>
             <Box sx={{
                 padding: '1rem',
+                paddingBottom: '0.4rem',
                 flexGrow: 1,
             }}>
                 <Typography variant='h6' sx={{
@@ -35,7 +37,7 @@ function AboutContent() {
                     Welcome to my Portfolio!
                 </Typography>
                 <Typography>
-                    My name is Patrick Burke and I am a passionate Full Stack Developer with an 
+                    My name is Patrick Burke and I am a Full Stack Developer with an 
                     engineering background. I have created this Portfolio site both as an online 
                     resume, and as an example of the type of responsive, reactive, and accessible
                     web applications that I love to create.
@@ -43,14 +45,24 @@ function AboutContent() {
             </Box>
             <Box sx={{
                 flexGrow: 0,
+                display: 'flex',
+                flexDirection: 'column',
                 margin: 'auto'
             }}>
-                <IconButton size='large'>
-                    <GitHub />
-                </IconButton>
-                <IconButton size='large'>
-                    <LinkedIn />
-                </IconButton>
+                <Button size='small' sx={{
+                    backgroundColor: 'secondary.light',
+                    color: '#fff'
+                }}>
+                    My Resume
+                </Button>
+                <Box>
+                    <IconButton size='large'>
+                        <GitHub />
+                    </IconButton>
+                    <IconButton size='large'>
+                        <LinkedIn />
+                    </IconButton>
+                </Box>
             </Box>
         </Box>
     )
