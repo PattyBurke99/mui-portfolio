@@ -17,10 +17,21 @@ const overviewCard = {
     (
         <>
             <Typography>
-                Full Stack Developer who has completed a Diploma in Engineering (2020) as well 
-                as a Graduate Certificate in Full Stack Development (2024). 
+                Full Stack Developer who has completed a Diploma in Engineering (2020),
+                and a Graduate Certificate in Full Stack Development (2024). 
             </Typography>
-            <Divider sx={{paddingY: '0.2rem'}}/>
+            <Divider sx={{marginY: '0.4rem'}}/>
+            <Typography>
+                Recent education/experience has revolved around Javascript (React ecosystem). 
+                Solid understanding of data structures, algorithms, and other language agnostic 
+                CS principles from previous engineering education.
+            </Typography>
+            <Divider sx={{marginY: '0.4rem'}}/>
+            <Typography>
+                Strong problem solving and communication skills. Experience working in a 
+                professional development environment, and with the workflows/techology you will
+                find there (Git, Agile, Azure Dev Ops, etc.).
+            </Typography>
         </>
     )
 }
@@ -28,6 +39,18 @@ const overviewCard = {
 const experienceCard = {
     title: "Experience",
     icon: <Assignment />,
+    content: (
+        <Box sx={{
+            display: 'flex'
+        }}>
+            <Box sx={{flexGrow: 1}}>
+                <Typography >Education:</Typography>
+            </Box>
+            <Box sx={{flexGrow: 1}}>
+
+            </Box>
+        </Box>
+    )
 }
 
 const skillsCard = {
