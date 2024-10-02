@@ -8,7 +8,7 @@ import {
     Slide,
     Typography
 } from '@mui/material'
-import { contentCardWidthMd } from '../constants';
+import { contentCardWidthMd, contentCardWidthLg } from '../constants';
 
 export interface IContentCardProps {
     icon?: React.ReactElement;
@@ -22,7 +22,7 @@ export function ContentCard({ icon, title, animationTime, zLayer, children }: IC
     return (
         <Slide in direction="right" timeout={animationTime}>
         <Card elevation={3} sx={{
-            width: {md: contentCardWidthMd},
+            width: { md: contentCardWidthMd, lg: contentCardWidthLg},
             zIndex: zLayer,
         }}>
             <CardHeader title={
