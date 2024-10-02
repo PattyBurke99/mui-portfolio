@@ -14,7 +14,6 @@ function Projects() {
         <Box sx={{
             display: 'flex',
             flexDirection: 'column',
-            minHeight: '100%',
         }}>
             <CardGroup cards={[portfolioCard]} />
         </Box>

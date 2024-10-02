@@ -58,11 +58,14 @@ function Layout() {
                 <Main open={isMdBreakpoint && aboutDrawerOpen} sx={{
                   height: '100%',
                   overflow: 'auto',
-                  padding: {xs: '1rem', md: '2rem'}
+                  paddingX: {xs: '1rem', md: '2rem'},
                 }}>
                     <Box sx={{
                       height: '100%',
                       marginLeft: {md: !aboutDrawerOpen ? '2rem' : 0},
+                      display: {md: 'flex'},
+                      flexDirection: {md: 'column'},
+                      justifyContent: {md: 'center'},
                       transition: theme.transitions.create('margin', {
                         easing: theme.transitions.easing.easeOut,
                         duration: theme.transitions.duration.enteringScreen,

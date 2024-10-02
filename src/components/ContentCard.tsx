@@ -32,7 +32,7 @@ export function ContentCard({ icon, title, animationTime, zLayer, children }: IC
                     </Box>
                 }/>
                 <Divider />
-                <CardContent sx={{height: 'calc(100% - 65px)'}}>
+                <CardContent sx={{padding: 0}}>
                     {children}
                 </CardContent>
             </Card>
