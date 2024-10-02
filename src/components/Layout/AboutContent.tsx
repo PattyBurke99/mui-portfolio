@@ -17,8 +17,8 @@ function AboutContent() {
             height: 'calc(100% - 3rem)'
         }}>
             <Avatar sx={{
-                width: { xs: '192px', md: '128px', lg: '256px' },
-                height: { xs: '192px', md: '128px', lg: '256px' },
+                width: { xs: '192px', md: '128px', xl: '256px' },
+                height: { xs: '192px', md: '128px', xl: '256px' },
                 margin: 'auto',
                 marginTop: { lg:'1rem' }
             }}/>
