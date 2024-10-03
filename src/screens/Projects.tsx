@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import {
     Box,
     Button,
@@ -19,7 +20,7 @@ const portfolioCard = {
             <Divider />
             <Typography sx={{padding: '0.4rem'}}>
                 This site has been designed to display correctly on a variety of screen/device
-                sizes, with good preformance and some reactivity to justify the production ready
+                sizes, with good performance and some reactivity to justify the production ready
                 technologies that were used in it's creation.
             </Typography>
             <Divider />
@@ -30,11 +31,16 @@ const portfolioCard = {
                 display: 'flex',
                 justifyContent: 'center'
             }}>
-                <Button sx={{
-                    marginTop: '2rem',
-                    backgroundColor: 'secondary.light',
-                    color: '#fff'
-                }}>
+                <Button 
+                    component={Link}
+                    to="https://github.com/PattyBurke99/mui-portfolio"
+                    target="_blank"
+                    sx={{
+                        marginTop: '2rem',
+                        backgroundColor: 'secondary.light',
+                        color: '#fff'
+                    }}
+                >
                     Source
                 </Button>
             </Box>
