@@ -3,6 +3,7 @@ import {
     Card,
     Drawer,
     IconButton,
+    Tooltip
 } from '@mui/material';
 import { styled } from '@mui/material/styles';
 import { ChevronLeft, ChevronRight } from '@mui/icons-material';
@@ -48,9 +49,11 @@ function AboutDrawer({ isOpen, handleDrawerOpen, handleDrawerClose }: IAboutDraw
                     overflowY: 'auto'
                 }}>
                     <DrawerHeader>
-                        <IconButton onClick={() => handleDrawerClose()}>
-                            <ChevronLeft />
-                        </IconButton>
+                        <Tooltip title="Close Sidebar" placement="left">
+                            <IconButton onClick={() => handleDrawerClose()}>
+                                <ChevronLeft />
+                            </IconButton>
+                        </Tooltip>
                     </DrawerHeader>
                     <AboutContent />
                 </Card>
@@ -62,10 +65,13 @@ function AboutDrawer({ isOpen, handleDrawerOpen, handleDrawerClose }: IAboutDraw
                 top: appbarHeightMd,
                 display: {xs: "none", md: "block"}
             }}>
-                <IconButton onClick={() => handleDrawerOpen()}>
-                    <ChevronRight />
-                </IconButton>
+                <Tooltip title="Open Sidebar" placement="right">
+                    <IconButton onClick={() => handleDrawerOpen()}>
+                        <ChevronRight />
+                    </IconButton>
+                </Tooltip>
             </Box>
+
         }
     </>
     )

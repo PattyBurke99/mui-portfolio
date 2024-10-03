@@ -1,8 +1,10 @@
+import { Link } from 'react-router-dom';
 import {
     Avatar,
     Box,
     Button,
     IconButton,
+    Tooltip,
     Typography
 } from '@mui/material';
 import {
@@ -58,12 +60,26 @@ function AboutContent() {
                     My Resume
                 </Button>
                 <Box>
-                    <IconButton size='large'>
-                        <GitHub />
-                    </IconButton>
-                    <IconButton size='large'>
-                        <LinkedIn />
-                    </IconButton>
+                    <Tooltip title="Github" placement="top">
+                        <IconButton 
+                            component={Link}
+                            to="https://github.com/pattyBurke99/"
+                            target="_blank"
+                            size='large'
+                        >
+                            <GitHub />
+                        </IconButton>
+                    </Tooltip>
+                    <Tooltip title="LinkedIn" placement="top">
+                        <IconButton 
+                            component={Link}
+                            to="https://www.linkedin.com/in/patrick-burke-97b592214/"
+                            target="_blank"
+                            size='large'
+                        >
+                            <LinkedIn />
+                        </IconButton>
+                    </Tooltip>
                 </Box>
             </Box>
         </Box>
