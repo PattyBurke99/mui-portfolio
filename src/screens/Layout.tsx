@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, WheelEvent } from "react";
 import { Outlet } from "react-router-dom";
 import { Box, useMediaQuery, useTheme } from "@mui/material";
 import { styled } from '@mui/material/styles';
@@ -32,6 +32,13 @@ function Layout() {
     const theme = useTheme();
     const [aboutDrawerOpen, setAboutDrawerOpen] = useState<boolean>(true);
 
+    const handleWheel = (event: WheelEvent<HTMLDivElement>) => {
+      event.preventDefault(); // Prevent the default vertical scroll behavior
+      const container = event.currentTarget;
+      container.scrollLeft += event.deltaY; // Scroll horizontally based on vertical wheel movement
+    };
+  
+
     const handleDrawerOpen = () => {
         setAboutDrawerOpen(true);
     }
@@ -55,10 +62,13 @@ function Layout() {
                 marginTop: {xs: appbarHeightXs, md: appbarHeightMd},
                 height: '100%'
             }}>
-                <Main open={isMdBreakpoint && aboutDrawerOpen} sx={{
-                  height: '100%',
-                  overflow: 'auto',
-                  padding: {xs: '1rem', md: '2rem'},
+                <Main 
+                  open={isMdBreakpoint && aboutDrawerOpen} 
+                  onWheel={handleWheel}
+                  sx={{
+                    height: '100%',
+                    overflow: 'auto',
+                    padding: {xs: '1rem', md: '2rem'},
                 }}>
                     <Box sx={{
                       height: '100%',
