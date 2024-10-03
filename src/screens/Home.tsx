@@ -5,6 +5,7 @@ import {
     List,
     ListItem,
     ListItemText,
+    Slide,
     Typography,
     useMediaQuery,
     useTheme
@@ -126,14 +127,19 @@ function Home() {
             flexDirection: 'column',
         }}>
             {!isMdBreakpoint &&
-                <Card elevation={3} sx={{
-                    paddingY: '1rem',
-                    marginBottom: '1rem'
-                }}>
-                    <AboutContent />
-                </Card>
+                <Slide in direction="right" timeout={300}>
+                    <Card elevation={3} sx={{
+                        paddingY: '1rem',
+                        marginBottom: '1rem'
+                    }}>
+                        <AboutContent />
+                    </Card>
+                </Slide>
             }
-            <CardGroup cards={[overviewCard, experienceCard, skillsCard]}/>
+            <CardGroup 
+                cards={[overviewCard, experienceCard, skillsCard]}
+                animationOffset={isMdBreakpoint ? 0 : 300} 
+            />
         </Box>
     )
 }

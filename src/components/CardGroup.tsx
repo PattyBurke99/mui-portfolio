@@ -10,11 +10,12 @@ interface IContentCardData {
 
 interface ICardGroup {
     cards: IContentCardData[];
+    animationOffset?: number;
 }
 
 const baseAnimationTime = 300;
 
-function CardGroup({ cards }: ICardGroup) {
+function CardGroup({ cards, animationOffset }: ICardGroup) {
 
     //Super rough should be changed at some time
     //This is here to prevent a problem in which the overflow would not be computed correctly
@@ -41,7 +42,9 @@ function CardGroup({ cards }: ICardGroup) {
                     key={`card-${card.title}-${index}`}
                     title={card.title}
                     icon={card.icon} 
-                    animationTime={(index+1) * baseAnimationTime} 
+                    animationTime={
+                        (animationOffset ? animationOffset : 0) + ((index+1) * baseAnimationTime)
+                    } 
                     zLayer={cards.length-index}
                 >
                     {card.content}
