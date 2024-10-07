@@ -29,9 +29,9 @@ interface IPage {
 }
 
 const pages: IPage[] = [
-    {name: 'Home', path: '/mui-portfolio/'},
-    {name: 'Projects', path: '/mui-portfolio/projects'},
-    {name: 'Contact', path: '/mui-portfolio/contact'}
+    {name: 'Home', path: '/'},
+    {name: 'Projects', path: '/projects'},
+    {name: 'Contact', path: '/contact'}
 ];
 
 function ResponsiveAppBar() {
