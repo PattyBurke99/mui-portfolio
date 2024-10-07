@@ -1,5 +1,5 @@
 import {
-  createBrowserRouter,
+  createHashRouter,
   RouterProvider,
 } from "react-router-dom";
 import { 
@@ -19,7 +19,7 @@ import Projects from "./screens/Projects";
 // import Contact from "./screens/Contact";
 import ContactForm from "./components/ContactForm";
 
-const router = createBrowserRouter([
+const router = createHashRouter([
   {
     path: "/",
     element: <Layout />,
