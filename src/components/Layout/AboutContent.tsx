@@ -51,14 +51,16 @@ function AboutContent() {
                 flexDirection: 'column',
                 margin: 'auto'
             }}>
-                <Button size='small' sx={{
-                    backgroundColor: 'secondary.light',
-                    color: '#fff',
-                    marginBottom: {xs: '1rem', md: 0, lg: '2rem'},
-                    marginTop: {xs: '2rem', md: 0}
-                }}>
-                    My Resume
-                </Button>
+                <Tooltip title="Resume" placement="top">
+                    <Button size='small' sx={{
+                        backgroundColor: 'secondary.light',
+                        color: '#fff',
+                        marginBottom: {xs: '1rem', md: 0, lg: '2rem'},
+                        marginTop: {xs: '2rem', md: 0}
+                    }}>
+                        My Resume
+                    </Button>
+                </Tooltip>
                 <Box>
                     <Tooltip title="Github" placement="top">
                         <IconButton 
