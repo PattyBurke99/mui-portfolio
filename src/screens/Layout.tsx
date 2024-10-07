@@ -33,9 +33,9 @@ function Layout() {
     const [aboutDrawerOpen, setAboutDrawerOpen] = useState<boolean>(true);
 
     const handleWheel = (event: WheelEvent<HTMLDivElement>) => {
-      event.preventDefault(); // Prevent the default vertical scroll behavior
+      // event.preventDefault(); commented out, this throws error, look into this later
       const container = event.currentTarget;
-      container.scrollLeft += event.deltaY; // Scroll horizontally based on vertical wheel movement
+      container.scrollLeft += event.deltaY;
     };
   
 
