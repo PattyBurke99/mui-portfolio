@@ -21,7 +21,7 @@ import ContactForm from "./components/ContactForm";
 
 const router = createBrowserRouter([
   {
-    path: "/mui-portfolio/",
+    path: "/",
     element: <Layout />,
     children: [
       {
@@ -29,11 +29,11 @@ const router = createBrowserRouter([
         element: <Home />
       },
       {
-        path: "/mui-portfolio/projects",
+        path: "/projects",
         element: <Projects />
       },
       {
-        path: "/mui-portfolio/contact",
+        path: "/contact",
         element: <ContactForm />
       }
     ]
