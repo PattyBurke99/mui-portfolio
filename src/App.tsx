@@ -16,7 +16,8 @@ import '@fontsource/roboto/700.css';
 import Layout from "./screens/Layout";
 import Home from "./screens/Home";
 import Projects from "./screens/Projects";
-import Contact from "./screens/Contact";
+// import Contact from "./screens/Contact";
+import ContactForm from "./components/ContactForm";
 
 const router = createBrowserRouter([
   {
@@ -33,7 +34,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/mui-portfolio/contact",
-        element: <Contact />
+        element: <ContactForm />
       }
     ]
   },
