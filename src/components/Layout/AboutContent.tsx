@@ -52,12 +52,18 @@ function AboutContent() {
                 margin: 'auto'
             }}>
                 <Tooltip title="Resume" placement="top">
-                    <Button size='small' sx={{
-                        backgroundColor: 'secondary.light',
-                        color: '#fff',
-                        marginBottom: {xs: '1rem', md: 0, lg: '2rem'},
-                        marginTop: {xs: '2rem', md: 0}
-                    }}>
+                    <Button size='small' 
+                        component={Link}
+                        to="https://patrickburke.dev/ResumeOct.pdf"
+                        target="_blank"
+                        sx={{
+                            backgroundColor: 'secondary.light',
+                            color: '#fff',
+                            marginBottom: {xs: '1rem', md: 0, lg: '2rem'},
+                            marginTop: {xs: '2rem', md: 0}
+        
+                        }}
+                    >
                         My Resume
                     </Button>
                 </Tooltip>
