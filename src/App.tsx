@@ -41,8 +41,19 @@ const router = createBrowserRouter([
 
 let theme = createTheme({
   palette: {
+    // mode: 'dark',
     primary: { main: '#273043' },
     secondary: { main: '#F02D3A' }
+  },
+  components: {
+    MuiCardHeader: {
+      styleOverrides: {
+        root: ({ theme }) => ({
+          backgroundColor: theme.palette.primary.light,
+          color: theme.palette.primary.contrastText
+        }),
+      },
+    }
   }
 });
 
