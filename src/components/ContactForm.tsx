@@ -90,7 +90,6 @@ function ContactForm() {
               newErrors[error.path[0]] = error.message;
             });
             setFormErrors({...formErrors, ...newErrors});
-            console.log(newErrors);
           }
           return;
         }
