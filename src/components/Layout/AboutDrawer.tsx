@@ -3,7 +3,8 @@ import {
     Card,
     Drawer,
     IconButton,
-    Tooltip
+    Tooltip,
+    useTheme
 } from '@mui/material';
 import { styled } from '@mui/material/styles';
 import { ChevronLeft, ChevronRight } from '@mui/icons-material';
@@ -25,6 +26,7 @@ interface IAboutDrawerProps {
 }
 
 function AboutDrawer({ isOpen, handleDrawerOpen, handleDrawerClose }: IAboutDrawerProps) {
+    const theme = useTheme();
 
     return (
     <>
@@ -44,8 +46,8 @@ function AboutDrawer({ isOpen, handleDrawerOpen, handleDrawerClose }: IAboutDraw
                 overflow: 'hidden'
             }}>
                 <Card elevation={6} sx={{
-                    height: "99%",
-                    width: "99%",
+                    height: theme.palette.mode === 'light' ? '99%' : '100%',
+                    width: theme.palette.mode === 'light' ? '99%' : '100%',
                     overflowY: 'auto'
                 }}>
                     <DrawerHeader>
