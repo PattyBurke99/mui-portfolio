@@ -12,20 +12,20 @@ const portfolioCard = {
     title: 'Portfolio',
     content: (
         <Box >
-            <Typography sx={{padding: '0.4rem'}}>
+            <Typography sx={{padding: '0.4rem', fontSize: {xl: '18px'}}}>
                 The site you are currently viewing was designed/created entirely by me from 
                 scratch. Technologies used during the creation of this site include TypeScript,
                 React, and Material UI. It features basic CI/CD in the form of GitHub actions 
                 deploying it to GitHub pages.
             </Typography>
             <Divider />
-            <Typography sx={{padding: '0.4rem'}}>
+            <Typography sx={{padding: '0.4rem', fontSize: {xl: '18px'}}}>
                 This site has been designed to display correctly on a variety of screen/device
                 sizes, with good performance and some reactivity to justify the production ready
                 technologies that were used in it's creation.
             </Typography>
             <Divider />
-            <Typography sx={{padding: '0.4rem'}}>
+            <Typography sx={{padding: '0.4rem', fontSize: {xl: '18px'}}}>
                 The source code for this site can be viewed on my GitHub below
             </Typography>
             <Box sx={{

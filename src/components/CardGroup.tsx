@@ -1,6 +1,6 @@
 import { Box } from '@mui/material';
 import { ContentCard } from './ContentCard';
-import { contentCardWidthMd, contentCardWidthLg } from '../constants';
+import { contentCardWidthMd, contentCardWidthLg, contentCardWidthXl } from '../constants';
 
 interface IContentCardData {
     title: string;
@@ -28,13 +28,17 @@ function CardGroup({ cards, animationOffset }: ICardGroup) {
     const lgMinWidth = (cards.length*parseFloat(contentCardWidthLg)) + 
     ((cards.length-1)*rootFontSize) + 2*rootFontSize;
 
+    const xlMinWidth = (cards.length*parseFloat(contentCardWidthXl)) + 
+    ((cards.length-1)*rootFontSize) + 2*rootFontSize;
+
+
     return (
         <Box sx={{
             flexGrow: 1,
             height: '100%',
             display: 'flex',
             flexDirection: {xs: 'column', md: 'row'},
-            minWidth: { md: mdMinWidth, lg: lgMinWidth },
+            minWidth: { md: mdMinWidth, lg: lgMinWidth, xl: xlMinWidth },
             gap: '1rem'
         }}>
             {cards.map((card, index) => (

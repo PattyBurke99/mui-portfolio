@@ -20,18 +20,18 @@ const overviewCard = {
     content:
     (
         <Box>
-            <Typography sx={{padding: '0.4rem'}}>
+            <Typography sx={{padding: '0.4rem', fontSize: {xl: '18px'}}}>
                 Full Stack Developer who has completed a Diploma in Engineering (2020),
                 and a Graduate Certificate in Full Stack Development (2024). 
             </Typography>
             <Divider sx={{marginY: '0.4rem'}}/>
-            <Typography sx={{padding: '0.4rem'}}>
+            <Typography sx={{padding: '0.4rem', fontSize: {xl: '18px'}}}>
                 Recent education/experience has revolved around Javascript (specifically the React
                 ecosystem). Solid understanding of data structures, algorithms, and other language 
                 agnostic CS principles from previous engineering education.
             </Typography>
             <Divider sx={{marginY: '0.4rem'}}/>
-            <Typography sx={{padding: '0.4rem'}}>
+            <Typography sx={{padding: '0.4rem', fontSize: {xl: '18px'}}}>
                 Strong problem solving and communication skills. Experience working in a 
                 professional development environment, and with the workflows/techology you will
                 find there (Git, Agile, Azure Dev Ops, etc.).
@@ -46,34 +46,61 @@ const experienceCard = {
     content: (
         <List>
             <ListItemText 
-                sx={{paddingX: '0.3rem', marginTop: 0}}
+                sx={{paddingX: '0.3rem', marginTop: 0, fontSize: {xl: '20px'}}}
                 primary="Education:"
                 primaryTypographyProps={{variant: 'h6'}}
             />
             <Divider />
             <ListItem divider>
                 <Box>
-                    <Typography>Diploma in Engineering (2018-2020)</Typography>
-                    <Typography>St. Francis Xavier University</Typography>
+                    <Typography sx={{
+                        fontSize: {xl: '18px'}
+                    }}> 
+                        Diploma in Engineering (2018-2020)</Typography>
+                    <Typography sx={{
+                        fontSize: {xl: '18px'}
+                    }}>
+                        St. Francis Xavier University
+                    </Typography>
                 </Box>
             </ListItem>
             <ListItem divider>
                 <Box>
-                    <Typography>Full Stack Development (2023-2024)</Typography>
-                    <Typography>Nova Scotia Community College</Typography>
+                    <Typography sx={{
+                        fontSize: {xl: '18px'}
+                    }}>
+                        Full Stack Development (2023-2024)
+                    </Typography>
+                    <Typography sx={{
+                        fontSize: {xl: '18px'}
+                    }}>
+                        Nova Scotia Community College
+                    </Typography>
                 </Box>
             </ListItem>
             <ListItemText 
-                sx={{paddingX: '0.3rem'}}
+                sx={{paddingX: '0.3rem', fontSize: {xl: '20px'}}}
                 primary="Work Experience:"
                 primaryTypographyProps={{variant: 'h6'}}
             />
             <Divider />
             <ListItem>
                 <Box>
-                    <Typography>Truverus Inc.</Typography>
-                    <Typography>Full Stack Developer (Intern)</Typography>
-                    <Typography>May 2024 - Sep. 2024</Typography>
+                    <Typography sx={{
+                        fontSize: {xl: '18px'}
+                    }}>
+                        Truverus Inc.
+                    </Typography>
+                    <Typography sx={{
+                        fontSize: {xl: '18px'}
+                    }}>
+                        Full Stack Developer (Intern)
+                    </Typography>
+                    <Typography sx={{
+                        fontSize: {xl: '18px'}
+                    }}>
+                        May 2024 - Sep. 2024
+                    </Typography>
                 </Box>
             </ListItem>
         </List>
@@ -92,14 +119,18 @@ const skillsCard = {
                 />
                 <Divider />
                 <Box  sx={{display: 'flex'}}>
-                    <Box>
+                    <Box sx={{
+                        fontSize: {xl: '18px'}
+                    }}>
                         <ListItem>JavaScript</ListItem>
                         <ListItem>React</ListItem>
                         <ListItem>MySQL</ListItem>
                         <ListItem>Responsive Design</ListItem>
                         <ListItem>Agile Methodologies</ListItem>
                     </Box>
-                    <Box>
+                    <Box sx={{
+                        fontSize: {xl: '18px'}
+                    }}>
                         <ListItem>HTML/CSS</ListItem>
                         <ListItem>Node.js</ListItem>
                         <ListItem>Git</ListItem>
