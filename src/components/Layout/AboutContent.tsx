@@ -45,7 +45,7 @@ function AboutContent() {
                     My name is Patrick Burke and I am a Full Stack Developer with an 
                     engineering background. I have created this Portfolio site both as an online 
                     resume, and as an example of the type of responsive, reactive, and accessible
-                    web applications that I love to create.
+                    web applications that I take pride in developing.
                 </Typography>
             </Box>
             <Box sx={{
