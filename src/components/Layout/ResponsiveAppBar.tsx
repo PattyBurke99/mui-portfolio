@@ -57,7 +57,7 @@ function ResponsiveAppBar() {
                 <Toolbar disableGutters>
                     <Typography fontSize={44} fontWeight={8} sx={{ 
                         marginRight: '0.4rem',
-                        display: {xs: 'none', md: 'block', xl: 'none'}
+                        display: {xs: 'none', md: 'block'}
                     }}>
                         &#123;
                     </Typography>
@@ -88,7 +88,7 @@ function ResponsiveAppBar() {
                         </Typography>
                     </Box>
                     <Typography fontSize={44} fontWeight={8} sx={{ 
-                        display: {xs: 'none', md: 'block', xl: 'none'},
+                        display: {xs: 'none', md: 'block'},
                         marginLeft: '0.4rem'
                     }}>
                         &#125;
