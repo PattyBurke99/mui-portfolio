@@ -37,7 +37,7 @@ const portfolioCard = {
                     target="_blank"
                     sx={{
                         marginTop: '2rem',
-                        backgroundColor: 'secondary.light',
+                        backgroundColor: 'secondary.main',
                         color: '#fff'
                     }}
                 >

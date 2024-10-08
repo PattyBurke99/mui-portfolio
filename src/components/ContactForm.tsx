@@ -175,7 +175,7 @@ function ContactForm() {
               </FormControl>
               {(messageState !== MessageState.sent) &&
               <Button onClick={submitForm} sx={{
-                backgroundColor: 'secondary.light',
+                backgroundColor: 'secondary.main',
                 color: '#fff',
               }}>
                 {(messageState === MessageState.notSent) ? 'Send Message'

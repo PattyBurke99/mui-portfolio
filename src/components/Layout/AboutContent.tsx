@@ -57,7 +57,7 @@ function AboutContent() {
                         to="https://patrickburke.dev/ResumeOct.pdf"
                         target="_blank"
                         sx={{
-                            backgroundColor: 'secondary.light',
+                            backgroundColor: 'secondary.main',
                             color: '#fff',
                             marginBottom: {xs: '1rem', md: 0, lg: '2rem'},
                             marginTop: {xs: '2rem', md: 0}
