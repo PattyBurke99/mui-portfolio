@@ -49,8 +49,11 @@ let theme = createTheme({
     MuiCardHeader: {
       styleOverrides: {
         root: ({ theme }) => ({
-          backgroundColor: theme.palette.primary.light,
-          color: theme.palette.primary.contrastText
+          ...(theme.palette.mode === 'light' ? 
+          { 
+            backgroundColor: theme.palette.primary.light,
+            color: theme.palette.primary.contrastText
+          } : {} ),
         }),
       },
     }
