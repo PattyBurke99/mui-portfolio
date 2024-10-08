@@ -34,7 +34,9 @@ const FormDataSchema = z.object({
     message: 'Name must be less than 20 characters!'
   }),
   user_email: z.string().email({message: 'Invalid email!'}),
-  message: z.string()
+  message: z.string().min(20, {
+    message: 'Message must be atleast 20 characters!'
+  })
 });
 
 //Todo: change to react-hook-form or similar library for managing form state
