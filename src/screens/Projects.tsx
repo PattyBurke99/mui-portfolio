@@ -15,7 +15,8 @@ const portfolioCard = {
             <Typography sx={{padding: '0.4rem'}}>
                 The site you are currently viewing was designed/created entirely by me from 
                 scratch. Technologies used during the creation of this site include TypeScript,
-                React, and Material UI.
+                React, and Material UI. It features basic CI/CD in the form of GitHub actions 
+                deploying it to GitHub pages.
             </Typography>
             <Divider />
             <Typography sx={{padding: '0.4rem'}}>
