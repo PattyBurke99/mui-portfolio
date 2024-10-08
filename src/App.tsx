@@ -41,7 +41,11 @@ const router = createBrowserRouter([
 
 let theme = createTheme({
   colorSchemes: {
-    dark: true
+    dark: {
+      palette: {
+        secondary: { main: '#F02D3A' }
+      }
+    }
   },
   palette: {
     primary: { main: '#273043' },
