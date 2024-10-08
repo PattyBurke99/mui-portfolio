@@ -10,7 +10,9 @@ import {
   FormControl,
   Slide,
   TextField,
-  Typography
+  Typography,
+  useMediaQuery,
+  useTheme
  } from '@mui/material';
 import emailjs from '@emailjs/browser';
 import { z } from "zod";
@@ -43,6 +45,9 @@ const FormDataSchema = z.object({
 //Did not initally realize how complicated managing the form state would become
 
 function ContactForm() {
+    const theme = useTheme();
+    const isXlSize: boolean = useMediaQuery(theme.breakpoints.up("xl"));
+
     const [formData, setFormData] = useState<IFormData>({
       user_name: '',
       user_email: '',
@@ -168,7 +173,7 @@ function ContactForm() {
                   label="Message"
                   variant="outlined"
                   multiline
-                  rows={6}
+                  rows={isXlSize ? 12 : 6}
                   onChange={onMessageChange}
                   error={!!formErrors.message}
                   helperText={formErrors.message}
