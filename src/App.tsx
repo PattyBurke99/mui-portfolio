@@ -63,33 +63,33 @@ let theme = createTheme({
         }),
       },
     },
-    MuiTypography: {
-      styleOverrides: {
-        root: {
-          '@media (min-width:1536px)': {
-            fontSize: '18px'
-          }
-        }
-      },
-    },
-    MuiListItem: {
-      styleOverrides: {
-        root: {
-          '@media (min-width:1536px)': {
-            fontSize: '18px'
-          }
-        }
-      },
-    },
-    MuiListItemText: {
-      styleOverrides: {
-        root: {
-          '@media (min-width:1536px)': {
-            fontSize: '18px'
-          }
-        }
-      },
-    }
+    // MuiTypography: {
+    //   styleOverrides: {
+    //     root: {
+    //       '@media (min-width:1536px)': {
+    //         fontSize: '18px'
+    //       }
+    //     }
+    //   },
+    // },
+    // MuiListItem: {
+    //   styleOverrides: {
+    //     root: {
+    //       '@media (min-width:1536px)': {
+    //         fontSize: '18px'
+    //       }
+    //     }
+    //   },
+    // },
+    // MuiListItemText: {
+    //   styleOverrides: {
+    //     root: {
+    //       '@media (min-width:1500px)': {
+    //         fontSize: '18px'
+    //       }
+    //     }
+    //   },
+    // }
   }
 });
 
