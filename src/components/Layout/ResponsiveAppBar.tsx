@@ -17,6 +17,8 @@ import {
 } from '@mui/material'
 import MenuIcon from '@mui/icons-material/Menu';
 
+import ToggleDarkmodeButton from '../ToggleDarkmodeButton';
+
 import { 
     mobileDrawerWidth,
     appbarHeightXs,
@@ -180,11 +182,7 @@ function ResponsiveAppBar() {
                             ))}
                         </Box>
                     </Box>
-                    <Box sx={{
-                        display: {md: "none"},
-                        flexBasis: 48,
-                        flexGrow: 0
-                    }}/>
+                    <ToggleDarkmodeButton />
                 </Toolbar>
             </Container>
         </AppBar>

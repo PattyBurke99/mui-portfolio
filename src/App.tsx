@@ -40,8 +40,10 @@ const router = createBrowserRouter([
 ]);
 
 let theme = createTheme({
+  colorSchemes: {
+    dark: true
+  },
   palette: {
-    // mode: 'dark',
     primary: { main: '#273043' },
     secondary: { main: '#F02D3A' }
   },
@@ -56,6 +58,13 @@ let theme = createTheme({
           } : {} ),
         }),
       },
+    },
+    MuiButton: {
+      styleOverrides: {
+        root: {
+          
+        }
+      }
     }
   }
 });
