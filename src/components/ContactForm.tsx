@@ -6,6 +6,7 @@ import {
   CardContent,
   CardHeader,
   CircularProgress,
+  Divider,
   FormControl,
   Slide,
   TextField,
@@ -119,6 +120,7 @@ function ContactForm() {
                 <Typography display="inline" variant="h5">Contact Me</Typography>
               </Box>
             }/>
+            <Divider />
             <CardContent sx={{
               display: 'flex',
               flexDirection: 'column',
