@@ -34,14 +34,11 @@ function AboutContent() {
                     paddingY: '0.5rem',
                     display: 'flex',
                     justifyContent: 'center',
-                    textDecoration: 'underline',
-                    fontSize: {xl: '20px'}
+                    textDecoration: 'underline'
                 }}>
                     Welcome to my Portfolio!
                 </Typography>
-                <Typography sx={{
-                    fontSize: {xl: '18px'}
-                }}>
+                <Typography>
                     My name is Patrick Burke and I am a Full Stack Developer with an 
                     engineering background. I have created this Portfolio site both as an online 
                     resume, and as an example of the type of responsive, reactive, and accessible
