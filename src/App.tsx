@@ -5,8 +5,7 @@ import {
 import { 
   createTheme, 
   ThemeProvider ,
-  CssBaseline,
-  responsiveFontSizes
+  CssBaseline
 } from "@mui/material";
 import '@fontsource/roboto/300.css';
 import '@fontsource/roboto/400.css';
@@ -92,8 +91,6 @@ let theme = createTheme({
     // }
   }
 });
-
-theme = responsiveFontSizes(theme);
 
 function App() {
   return (
