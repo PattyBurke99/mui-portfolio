@@ -12,7 +12,7 @@ import {
     GitHub
 } from '@mui/icons-material';
 
-function AboutContent() {
+function About() {
     return (
         <Box sx={{
             display: 'flex',
@@ -94,4 +94,4 @@ function AboutContent() {
     )
 }
 
-export default AboutContent;
+export default About;

@@ -12,7 +12,7 @@ import {
 } from '@mui/material'
 import { Assignment, Engineering, List as ListIcon } from '@mui/icons-material';    
 import CardGroup from '../components/CardGroup';
-import AboutContent from '../components/Layout/AboutContent';
+import About from './About';
 
 const overviewCard = {
     title: 'Overview',
@@ -132,7 +132,7 @@ function Home() {
                         paddingY: '1rem',
                         marginBottom: '1rem'
                     }}>
-                        <AboutContent />
+                        <About />
                     </Card>
                 </Slide>
             }
