@@ -56,12 +56,7 @@ const placeholderCard = {
 
 function Projects() {
     return (
-        <Box sx={{
-            display: 'flex',
-            flexDirection: 'column',
-        }}>
-            <CardGroup cards={[portfolioCard, placeholderCard]} />
-        </Box>
+         <CardGroup cards={[portfolioCard, placeholderCard]} />
     )
 }
 

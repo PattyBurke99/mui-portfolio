@@ -125,10 +125,7 @@ function Home() {
 
     const isMdBreakpoint: boolean = useMediaQuery(theme.breakpoints.up('md'));
     return (
-        <Box sx={{
-            display: 'flex',
-            flexDirection: 'column',
-        }}>
+        <>
             {!isMdBreakpoint &&
                 <Slide in direction="right" timeout={300}>
                     <Card elevation={3} sx={{
@@ -143,7 +140,7 @@ function Home() {
                 cards={[overviewCard, experienceCard, skillsCard]}
                 animationOffset={isMdBreakpoint ? 0 : 300} 
             />
-        </Box>
+        </>
     )
 }
 
