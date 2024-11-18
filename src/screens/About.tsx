@@ -19,7 +19,7 @@ function About() {
             flexDirection: 'column',
             height: 'calc(100% - 3rem)'
         }}>
-            <Avatar src='https://patrickburke.dev/Headshot.jpeg' sx={{
+            <Avatar src='https://patrickburke.dev/Headshot.jpg' sx={{
                 width: { xs: '192px', md: '128px', xl: '256px' },
                 height: { xs: '192px', md: '128px', xl: '256px' },
                 margin: 'auto',
