@@ -73,9 +73,6 @@ function Layout() {
                     <Box sx={{
                       height: '100%',
                       marginLeft: {md: !aboutDrawerOpen ? '2rem' : 0},
-                      display: {md: 'flex'},
-                      flexDirection: {md: 'column'},
-                      justifyContent: {md: 'center'},
                       transition: theme.transitions.create('margin', {
                         easing: theme.transitions.easing.easeOut,
                         duration: theme.transitions.duration.enteringScreen,

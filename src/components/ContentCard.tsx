@@ -1,4 +1,4 @@
-import { cloneElement } from 'react';
+import React, { cloneElement } from 'react';
 import {
     Box,
     Card,
@@ -8,21 +8,21 @@ import {
     Slide,
     Typography
 } from '@mui/material'
-import { contentCardWidthMd, contentCardWidthLg } from '../constants';
+import { contentCardWidthMd, contentCardWidthLg, contentCardWidthXl } from '../constants';
 
 export interface IContentCardProps {
     icon?: React.ReactElement;
     title: string;
     animationTime: number;
     zLayer: number;
-    children?: React.ReactNode;
+    sections: React.ReactElement[];
 }
 
-export function ContentCard({ icon, title, animationTime, zLayer, children }: IContentCardProps) {
+export function ContentCard({ icon, title, animationTime, zLayer, sections }: IContentCardProps) {
     return (
         <Slide in direction="right" timeout={animationTime}>
             <Card elevation={3} sx={{
-                width: { md: contentCardWidthMd, lg: contentCardWidthLg},
+                width: { md: contentCardWidthMd, lg: contentCardWidthLg, xl: contentCardWidthXl},
                 zIndex: zLayer,
             }}>
                 <CardHeader title={
@@ -32,8 +32,15 @@ export function ContentCard({ icon, title, animationTime, zLayer, children }: IC
                     </Box>
                 }/>
                 <Divider />
-                <CardContent sx={{padding: 0}}>
-                    {children}
+                <CardContent sx={{
+                    display: 'flex',
+                    flexDirection: 'column',
+                }}>
+                    {sections.map(section => (
+                        <Box>
+                            {section}
+                        </Box>
+                    ))}
                 </CardContent>
             </Card>
         </Slide>

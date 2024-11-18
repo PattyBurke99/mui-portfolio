@@ -5,8 +5,7 @@ import {
 import { 
   createTheme, 
   ThemeProvider ,
-  CssBaseline,
-  responsiveFontSizes
+  CssBaseline
 } from "@mui/material";
 import '@fontsource/roboto/300.css';
 import '@fontsource/roboto/400.css';
@@ -62,38 +61,12 @@ let theme = createTheme({
           } : {} ),
         }),
       },
-    },
-    // MuiTypography: {
-    //   styleOverrides: {
-    //     root: {
-    //       '@media (min-width:1536px)': {
-    //         fontSize: '18px'
-    //       }
-    //     }
-    //   },
-    // },
-    // MuiListItem: {
-    //   styleOverrides: {
-    //     root: {
-    //       '@media (min-width:1536px)': {
-    //         fontSize: '18px'
-    //       }
-    //     }
-    //   },
-    // },
-    // MuiListItemText: {
-    //   styleOverrides: {
-    //     root: {
-    //       '@media (min-width:1500px)': {
-    //         fontSize: '18px'
-    //       }
-    //     }
-    //   },
-    // }
+    }
+  },
+  typography: {
+    // fontSize: 16
   }
 });
-
-theme = responsiveFontSizes(theme);
 
 function App() {
   return (

@@ -1,7 +1,6 @@
 import {
     Box,
     Card,
-    Divider,
     List,
     ListItem,
     ListItemText,
@@ -12,112 +11,105 @@ import {
 } from '@mui/material'
 import { Assignment, Engineering, List as ListIcon } from '@mui/icons-material';    
 import CardGroup from '../components/CardGroup';
-import AboutContent from '../components/Layout/AboutContent';
+import About from './About';
 
 const overviewCard = {
     title: 'Overview',
     icon: <ListIcon />,
-    content:
-    (
-        <Box>
-            <Typography sx={{padding: '0.4rem'}}>
-                Full Stack Developer who has completed a Diploma in Engineering (2020),
-                and a Graduate Certificate in Full Stack Development (2024). 
-            </Typography>
-            <Divider sx={{marginY: '0.4rem'}}/>
-            <Typography sx={{padding: '0.4rem'}}>
-                Recent education/experience has revolved around Javascript (specifically the React
-                ecosystem). Solid understanding of data structures, algorithms, and other language 
-                agnostic CS principles from previous engineering education.
-            </Typography>
-            <Divider sx={{marginY: '0.4rem'}}/>
-            <Typography sx={{padding: '0.4rem'}}>
-                Strong problem solving and communication skills. Experience working in a 
-                professional development environment, and with the workflows/techology you will
-                find there (Git, Agile, Azure Dev Ops, etc.).
-            </Typography>
-        </Box>
-    )
+    sections: 
+    [
+        (<Typography sx={{padding: '0.4rem'}}>
+            Full Stack Developer who has completed a Diploma in Engineering (2020),
+            and a Graduate Certificate in Full Stack Development (2024). 
+        </Typography>),
+        (<Typography sx={{padding: '0.4rem'}}>
+            Recent education/experience has revolved around Javascript (specifically the React
+            ecosystem). Solid understanding of data structures, algorithms, and other language 
+            agnostic CS principles from previous engineering education.
+        </Typography>),
+        (<Typography sx={{padding: '0.4rem'}}>
+            Strong problem solving and communication skills. Experience working in a 
+            professional development environment, and with the workflows/techology you will
+            find there (Git, Agile, Azure Dev Ops, etc.).
+        </Typography>)
+
+    ]
 }
 
 const experienceCard = {
     title: "Experience",
     icon: <Assignment />,
-    content: (
-        <List>
+    sections: 
+    [
+        (<List>
             <ListItemText 
                 sx={{paddingX: '0.3rem', marginTop: 0}}
                 primary="Education:"
                 primaryTypographyProps={{variant: 'h6'}}
             />
-            <Divider />
-            <ListItem divider>
-                <Box>
-                    <Typography>Diploma in Engineering (2018-2020)</Typography>
-                    <Typography>St. Francis Xavier University</Typography>
-                </Box>
+            <ListItem>
+                Diploma in Engineering (2018-2020)<br />
+                St. Francis Xavier University
             </ListItem>
-            <ListItem divider>
-                <Box>
-                    <Typography>Full Stack Development (2023-2024)</Typography>
-                    <Typography>Nova Scotia Community College</Typography>
-                </Box>
+            <ListItem>
+                Full Stack Development (2023-2024)<br />
+                Nova Scotia Community College
             </ListItem>
+        </List>),
+        (<List>
             <ListItemText 
-                sx={{paddingX: '0.3rem'}}
+                sx={{paddingX: '0.3rem', marginTop: 0}}
                 primary="Work Experience:"
                 primaryTypographyProps={{variant: 'h6'}}
             />
-            <Divider />
             <ListItem>
-                <Box>
-                    <Typography>Truverus Inc.</Typography>
-                    <Typography>Full Stack Developer (Intern)</Typography>
-                    <Typography>May 2024 - Sep. 2024</Typography>
-                </Box>
+                Truverus Inc.<br />
+                Full Stack Developer (Intern)<br />
+                May 2024 - Sep. 2024<br />
             </ListItem>
-        </List>
-    )
+
+        </List>)
+    ]
 }
 
 const skillsCard = {
     title: "Skills",
     icon: <Engineering />,
-    content: (
-            <List sx={{ display: 'flex', flexDirection: 'column'}}>
-                <ListItemText 
-                    sx={{paddingX: '0.3rem', marginTop: 0}}
-                    primary="Technical Skills:"
-                    primaryTypographyProps={{variant: 'h6'}}
-                />
-                <Divider />
-                <Box  sx={{display: 'flex'}}>
-                    <Box>
-                        <ListItem>JavaScript</ListItem>
-                        <ListItem>React</ListItem>
-                        <ListItem>MySQL</ListItem>
-                        <ListItem>Responsive Design</ListItem>
-                        <ListItem>Agile Methodologies</ListItem>
-                    </Box>
-                    <Box>
-                        <ListItem>HTML/CSS</ListItem>
-                        <ListItem>Node.js</ListItem>
-                        <ListItem>Git</ListItem>
-                        <ListItem>DevOps</ListItem>
-                    </Box>
+    sections:
+    [
+        (<List sx={{ display: 'flex', flexDirection: 'column'}}>
+            <ListItemText 
+                sx={{paddingX: '0.3rem', marginTop: 0}}
+                primary="Technical Skills:"
+                primaryTypographyProps={{variant: 'h6'}}
+            />
+            <Box  sx={{display: 'flex'}}>
+                <Box>
+                    <ListItem>JavaScript</ListItem>
+                    <ListItem>React</ListItem>
+                    <ListItem>MySQL</ListItem>
+                    <ListItem>Responsive Design</ListItem>
+                    <ListItem>Agile Methodologies</ListItem>
                 </Box>
-                <Divider />
-                <ListItemText 
-                    sx={{paddingX: '0.3rem', marginTop: '0.4rem'}}
-                    primary="Soft Skills:"
-                    primaryTypographyProps={{variant: 'h6'}}
-                />
-                <Divider />
-                <ListItem>Problem Solving</ListItem>
-                <ListItem>Self-Learning</ListItem>
-                <ListItem>Communiation</ListItem>
-            </List>
-    )
+                <Box>
+                    <ListItem>HTML/CSS</ListItem>
+                    <ListItem>Node.js</ListItem>
+                    <ListItem>Git</ListItem>
+                    <ListItem>DevOps</ListItem>
+                </Box>
+            </Box>
+        </List>),
+        (<List>
+            <ListItemText 
+                sx={{paddingX: '0.3rem', marginTop: '0.4rem'}}
+                primary="Soft Skills:"
+                primaryTypographyProps={{variant: 'h6'}}
+            />
+            <ListItem>Problem Solving</ListItem>
+            <ListItem>Self-Learning</ListItem>
+            <ListItem>Communiation</ListItem>
+        </List>)
+    ]
 }
 
 function Home() {
@@ -125,17 +117,14 @@ function Home() {
 
     const isMdBreakpoint: boolean = useMediaQuery(theme.breakpoints.up('md'));
     return (
-        <Box sx={{
-            display: 'flex',
-            flexDirection: 'column',
-        }}>
+        <>
             {!isMdBreakpoint &&
                 <Slide in direction="right" timeout={300}>
                     <Card elevation={3} sx={{
                         paddingY: '1rem',
                         marginBottom: '1rem'
                     }}>
-                        <AboutContent />
+                        <About />
                     </Card>
                 </Slide>
             }
@@ -143,7 +132,7 @@ function Home() {
                 cards={[overviewCard, experienceCard, skillsCard]}
                 animationOffset={isMdBreakpoint ? 0 : 300} 
             />
-        </Box>
+        </>
     )
 }
 
