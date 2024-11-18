@@ -30,7 +30,7 @@ const overviewCard = {
         (<Typography sx={{padding: '0.4rem'}}>
             Strong problem solving and communication skills. Experience working in a 
             professional development environment, and with the workflows/techology you will
-            find there (Git, Agile, Azure Dev Ops, etc.).
+            find there.
         </Typography>)
 
     ]
@@ -115,10 +115,10 @@ const skillsCard = {
 function Home() {
     const theme = useTheme();
 
-    const isMdBreakpoint: boolean = useMediaQuery(theme.breakpoints.up('md'));
+    const isLgBreakpoint: boolean = useMediaQuery(theme.breakpoints.up('lg'));
     return (
         <>
-            {!isMdBreakpoint &&
+            {!isLgBreakpoint &&
                 <Slide in direction="right" timeout={300}>
                     <Card elevation={3} sx={{
                         paddingY: '1rem',
@@ -130,7 +130,7 @@ function Home() {
             }
             <CardGroup 
                 cards={[overviewCard, experienceCard, skillsCard]}
-                animationOffset={isMdBreakpoint ? 0 : 300} 
+                animationOffset={isLgBreakpoint ? 0 : 300} 
             />
         </>
     )

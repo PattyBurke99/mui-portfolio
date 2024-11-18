@@ -20,8 +20,8 @@ function About() {
             height: 'calc(100% - 3rem)'
         }}>
             <Avatar src='https://patrickburke.dev/Headshot.jpg' sx={{
-                width: { xs: '192px', md: '128px', xl: '256px' },
-                height: { xs: '192px', md: '128px', xl: '256px' },
+                width: { xs: '192px', lg: '128px', xl: '256px' },
+                height: { xs: '192px', lg: '128px', xl: '256px' },
                 margin: 'auto',
                 marginTop: { lg:'1rem' }
             }}/>
@@ -59,8 +59,8 @@ function About() {
                         sx={{
                             backgroundColor: 'secondary.main',
                             color: '#fff',
-                            marginBottom: {xs: '1rem', md: 0, lg: '2rem'},
-                            marginTop: {xs: '2rem', md: 0}
+                            marginBottom: {xs: '1rem', lg: '2rem'},
+                            marginTop: {xs: '2rem', lg: 0}
         
                         }}
                     >

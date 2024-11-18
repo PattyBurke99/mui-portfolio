@@ -22,7 +22,7 @@ import ToggleDarkmodeButton from '../ToggleDarkmodeButton';
 import { 
     mobileDrawerWidth,
     appbarHeightXs,
-    appbarHeightMd
+    appbarHeightLg
 } from '../../constants';
 
 interface IPage {
@@ -51,18 +51,18 @@ function ResponsiveAppBar() {
     return (
         <AppBar position="fixed" color="primary" sx={{
              zIndex: (theme) => theme.zIndex.drawer + 1,
-            height: {xs: appbarHeightXs, md: appbarHeightMd}
+            height: {xs: appbarHeightXs, lg: appbarHeightLg}
         }}>
             <Container maxWidth="xl">
                 <Toolbar disableGutters>
                     <Typography fontSize={44} fontWeight={8} sx={{ 
                         marginRight: '0.4rem',
-                        display: {xs: 'none', md: 'block'}
+                        display: {xs: 'none', lg: 'block'}
                     }}>
                         &#123;
                     </Typography>
                     <Box sx={{
-                        display: { xs: 'none', md: 'flex' },
+                        display: { xs: 'none', lg: 'flex' },
                         flexDirection: 'column',
                         color: 'inherit',
                     }}>
@@ -88,12 +88,12 @@ function ResponsiveAppBar() {
                         </Typography>
                     </Box>
                     <Typography fontSize={44} fontWeight={8} sx={{ 
-                        display: {xs: 'none', md: 'block'},
+                        display: {xs: 'none', lg: 'block'},
                         marginLeft: '0.4rem'
                     }}>
                         &#125;
                     </Typography>
-                    <Box sx={{ flexGrow: 0, display: { xs: 'flex', md: 'none' } }}>
+                    <Box sx={{ flexGrow: 0, display: { xs: 'flex', lg: 'none' } }}>
                         <IconButton
                             size="large"
                             // aria-label="account of current user"
@@ -139,7 +139,7 @@ function ResponsiveAppBar() {
                         justifyContent: 'center'
                     }}>
                         <Box sx={{
-                            display: { xs: 'flex', md: 'none' },
+                            display: { xs: 'flex', lg: 'none' },
                             flexDirection: 'column',
                             color: 'inherit',
                             width: 'fit-content',
@@ -168,7 +168,7 @@ function ResponsiveAppBar() {
                             </Typography>
                         </Box>
                     </Box>
-                    <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
+                    <Box sx={{ flexGrow: 1, display: { xs: 'none', lg: 'flex' } }}>
                         <Box sx={{ width: '100%', display: 'flex', justifyContent: 'flex-end' }} >
                             {pages.map((page: IPage) => (
                                 <Button

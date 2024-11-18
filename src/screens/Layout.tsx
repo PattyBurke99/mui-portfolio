@@ -5,7 +5,7 @@ import { styled } from '@mui/material/styles';
 
 import ResponsiveAppBar from "../components/Layout/ResponsiveAppBar";
 import AboutDrawer from "../components/Layout/AboutDrawer";
-import { aboutDrawerWidth, appbarHeightMd, appbarHeightXs } from "../constants";
+import { aboutDrawerWidth, appbarHeightXs, appbarHeightLg } from "../constants";
 
 const Main = styled('div')<{open?: boolean}>(({ theme }) => 
 ({
@@ -47,32 +47,32 @@ function Layout() {
         setAboutDrawerOpen(false);
     }
 
-    const isMdBreakpoint: boolean = useMediaQuery(theme.breakpoints.up('md'));
+    const isLgBreakpoint: boolean = useMediaQuery(theme.breakpoints.up('lg'));
 
     return (
         <>
             <ResponsiveAppBar />
-            {isMdBreakpoint && 
+            {isLgBreakpoint && 
             <AboutDrawer 
                 isOpen={aboutDrawerOpen}
                 handleDrawerOpen={handleDrawerOpen}
                 handleDrawerClose={handleDrawerClose}
             />}
             <Box sx={{
-                marginTop: {xs: appbarHeightXs, md: appbarHeightMd},
+                marginTop: {xs: appbarHeightXs, lg: appbarHeightLg},
                 height: '100%'
             }}>
                 <Main 
-                  open={isMdBreakpoint && aboutDrawerOpen} 
+                  open={isLgBreakpoint && aboutDrawerOpen} 
                   onWheel={handleWheel}
                   sx={{
                     height: '100%',
                     overflow: 'auto',
-                    padding: {xs: '1rem', md: '2rem'},
+                    padding: {xs: '1rem', lg: '2rem'},
                 }}>
                     <Box sx={{
                       height: '100%',
-                      marginLeft: {md: !aboutDrawerOpen ? '2rem' : 0},
+                      marginLeft: {lg: !aboutDrawerOpen ? '2rem' : 0},
                       transition: theme.transitions.create('margin', {
                         easing: theme.transitions.easing.easeOut,
                         duration: theme.transitions.duration.enteringScreen,

@@ -17,7 +17,7 @@ import {
 import emailjs from '@emailjs/browser';
 import { z } from "zod";
 
-import { contentCardWidthMd, contentCardWidthLg } from '../constants';
+import { contentCardWidthLg } from '../constants';
 
 interface IFormData extends Record<string, string>  {
   user_name: string;
@@ -119,7 +119,7 @@ function ContactForm() {
     return (
         <Slide in direction="right" timeout={600}>
           <Card elevation={3} sx={{
-            width: { md: 1.5*parseInt(contentCardWidthMd), lg: 2*parseInt(contentCardWidthLg)},
+            width: { lg: 2*parseInt(contentCardWidthLg)},
           }}>
             <CardHeader title={
               <Box sx={{position: 'relative'}}>

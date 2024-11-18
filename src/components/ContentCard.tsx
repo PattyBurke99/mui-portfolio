@@ -8,7 +8,7 @@ import {
     Slide,
     Typography
 } from '@mui/material'
-import { contentCardWidthMd, contentCardWidthLg, contentCardWidthXl } from '../constants';
+import { contentCardWidthLg, contentCardWidthXl } from '../constants';
 
 export interface IContentCardProps {
     icon?: React.ReactElement;
@@ -22,7 +22,7 @@ export function ContentCard({ icon, title, animationTime, zLayer, sections }: IC
     return (
         <Slide in direction="right" timeout={animationTime}>
             <Card elevation={3} sx={{
-                width: { md: contentCardWidthMd, lg: contentCardWidthLg, xl: contentCardWidthXl},
+                width: { lg: contentCardWidthLg, xl: contentCardWidthXl},
                 zIndex: zLayer,
             }}>
                 <CardHeader title={
@@ -36,8 +36,8 @@ export function ContentCard({ icon, title, animationTime, zLayer, sections }: IC
                     display: 'flex',
                     flexDirection: 'column',
                 }}>
-                    {sections.map(section => (
-                        <Box>
+                    {sections.map((section, index) => (
+                        <Box key={`section-${index}`}>
                             {section}
                         </Box>
                     ))}

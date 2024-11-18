@@ -10,7 +10,7 @@ import { styled } from '@mui/material/styles';
 import { ChevronLeft, ChevronRight } from '@mui/icons-material';
 
 import About from '../../screens/About';
-import { aboutDrawerWidth, appbarHeightMd } from '../../constants';
+import { aboutDrawerWidth, appbarHeightLg } from '../../constants';
 
 const DrawerHeader = styled('div')(({ theme }) => ({
     display: 'flex',
@@ -35,14 +35,14 @@ function AboutDrawer({ isOpen, handleDrawerOpen, handleDrawerClose }: IAboutDraw
             anchor="left"
             open={isOpen}
             sx={{
-                display: {xs: "none", md: "block"},
+                display: {xs: "none", lg: "block"},
                 boxSizing: 'border-box',
             }}
         >
             <Box sx={{
                 width: aboutDrawerWidth,
                 height: "100%",
-                marginTop: appbarHeightMd,
+                marginTop: appbarHeightLg,
                 overflow: 'hidden'
             }}>
                 <Card elevation={6} sx={{
@@ -64,8 +64,8 @@ function AboutDrawer({ isOpen, handleDrawerOpen, handleDrawerClose }: IAboutDraw
         {!isOpen &&
             <Box sx={{
                 position: "absolute",
-                top: appbarHeightMd,
-                display: {xs: "none", md: "block"}
+                top: appbarHeightLg,
+                display: {xs: "none", lg: "block"}
             }}>
                 <Tooltip title="Open Sidebar" placement="right">
                     <IconButton onClick={() => handleDrawerOpen()}>
