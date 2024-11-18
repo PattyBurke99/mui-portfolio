@@ -119,6 +119,7 @@ function ContactForm() {
     return (
         <Slide in direction="right" timeout={600}>
           <Card elevation={3} sx={{
+            height: '100%',
             width: { lg: 2*parseInt(contentCardWidthLg)},
           }}>
             <CardHeader title={
@@ -130,7 +131,9 @@ function ContactForm() {
             <CardContent sx={{
               display: 'flex',
               flexDirection: 'column',
-              gap: '1rem'
+              height: 'calc(100% - 64px)',
+              gap: '1rem',
+              justifyContent: 'center'
             }}>
               <FormControl 
                 fullWidth
@@ -173,7 +176,7 @@ function ContactForm() {
                   label="Message"
                   variant="outlined"
                   multiline
-                  rows={isXlSize ? 12 : 6}
+                  rows={isXlSize ? 20 : 12}
                   onChange={onMessageChange}
                   error={!!formErrors.message}
                   helperText={formErrors.message}
