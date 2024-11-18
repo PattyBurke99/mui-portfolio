@@ -5,7 +5,7 @@ import { contentCardWidthMd, contentCardWidthLg, contentCardWidthXl } from '../c
 interface IContentCardData {
     title: string;
     icon?: React.ReactElement;
-    content?: React.ReactNode;
+    sections: React.ReactElement[];
 }
 
 interface ICardGroup {
@@ -49,9 +49,8 @@ function CardGroup({ cards, animationOffset }: ICardGroup) {
                         (animationOffset ? animationOffset : 0) + ((index+1) * baseAnimationTime)
                     } 
                     zLayer={cards.length-index}
-                >
-                    {card.content}
-                </ContentCard>
+                    sections={card.sections}
+                />
             ))}
         </Box>
     );
