@@ -2,7 +2,6 @@ import { Link } from 'react-router-dom';
 import {
     Avatar,
     Box,
-    Button,
     IconButton,
     Tooltip,
     Typography
