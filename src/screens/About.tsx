@@ -51,22 +51,6 @@ function About() {
                 flexDirection: 'column',
                 margin: 'auto'
             }}>
-                <Tooltip title="Resume" placement="top">
-                    <Button size='small' 
-                        component={Link}
-                        to="https://patrickburke.dev/ResumeOct.pdf"
-                        target="_blank"
-                        sx={{
-                            backgroundColor: 'secondary.main',
-                            color: '#fff',
-                            marginBottom: {xs: '1rem', lg: '2rem'},
-                            marginTop: {xs: '2rem', lg: 0}
-        
-                        }}
-                    >
-                        My Resume
-                    </Button>
-                </Tooltip>
                 <Box>
                     <Tooltip title="Github" placement="top">
                         <IconButton 
