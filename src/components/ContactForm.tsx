@@ -176,7 +176,7 @@ function ContactForm() {
                   label="Message"
                   variant="outlined"
                   multiline
-                  rows={isXlSize ? 20 : 12}
+                  rows={isXlSize ? 20 : 10}
                   onChange={onMessageChange}
                   error={!!formErrors.message}
                   helperText={formErrors.message}
